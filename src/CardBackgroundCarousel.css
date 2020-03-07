@@ -5,11 +5,11 @@
     margin-top: 45px;
     font-size: 58px;
     color: white;
-    text-shadow: 3px 3px black;
+    text-shadow: 2px 1px black;
 }
 
 .owl-carousel {
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .owl-stage-outer {
@@ -64,6 +64,7 @@
 
 .btn-proceed {
     margin-top: 40px;
+    margin-bottom: 100px;
     width: 200px;
     height: 60px;
     display: inline-block;
@@ -71,7 +72,7 @@
     border-radius: 10rem;
     border: none;
     color: #fff;
-    background-color: #007e9e;
+    background-color: #f8c007;
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 600;
@@ -82,9 +83,47 @@
 .btn-proceed:hover {
     transform: scale(1.1);
     cursor: pointer;
-    background-color: #00aad4;
+    background-color: #f8c007;
 }
 
 .btn-proceed:focus {
+    outline: none;
+}
+
+.switch-set-buttons {
+    margin: auto;
+    width: 310px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.switch-set-buttons button{
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: #eece65;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.switch-set-buttons .btn-1 {
+    border-radius: 25px 0px 0px 25px;
+}
+
+.switch-set-buttons .btn-2 {
+    border-radius: 0 25px 25px 0;
+}
+
+.switch-set-buttons button:hover{
+    cursor: pointer;
+}
+
+.switch-set-buttons button:focus{
+    outline: none;
+}
+
+.switch-set-buttons .isactive {
+    background-color: #f8c007;
     outline: none;
 }
