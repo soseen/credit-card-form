@@ -63,7 +63,7 @@
 } */
 
 .btn-proceed {
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 100px;
     width: 200px;
     height: 60px;
@@ -101,10 +101,11 @@
     width: 150px;
     height: 50px;
     color: white;
-    background-color: #eece65;
+    background-color: #242424;
     border: none;
     font-size: 1rem;
     font-weight: 600;
+    transition: all 0.7s;
 }
 
 .switch-set-buttons .btn-1 {
@@ -126,4 +127,28 @@
 .switch-set-buttons .isactive {
     background-color: #f8c007;
     outline: none;
+}
+
+.navButtons {
+    margin: auto;
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    transition: all 1s;
+    margin-bottom: 50px;
+}
+
+
+.navButtons button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 5.5rem;
+    color: black;
+    opacity: 0.4;
+}
+
+.navButtons button:hover {
+    opacity: 1;
 }
