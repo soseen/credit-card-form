@@ -16,10 +16,13 @@ import 'font-awesome/css/font-awesome.min.css';
 
 const CardBackgroundCarousel = () => {
 
+    let selectedIndex = 0;
+    let oldIndex = 0;
     const owlSlider = useRef();
-    const [index, setIndex] = useState(1);
     const [currentSet, setCurrentSet] = useState(artTemplates);
-    const [currentSlide, setCurrentSlide] = useState(currentSet[index].id);
+    const [index, setIndex] = useState(0);
+    // const [desiredIndex, setDesiredIndex] = useState(0);
+    // const [currentSlide, setCurrentSlide] = useState(currentSet[index].id);
 
 
     const settings = {
@@ -34,57 +37,78 @@ const CardBackgroundCarousel = () => {
         margin: 30
       }
     
-    // useEffect(()=> {
-    //     owlSlider.current.next()
-    // }, [currentSlide]);
-
-
+    useEffect(()=> {
+        console.log(index)
+        return () => {
+            if(index > oldIndex){
+                console.log('index after right' + index)
+                owlSlider.current.next()
+                oldIndex = index;
+                console.log('old index: ' + oldIndex)
+            } else if (index < oldIndex){
+                console.log(index)
+                owlSlider.current.prev()
+                oldIndex = index;
+            } else {
+                console.log('nic nie rob')
+            }
+        }
+    }, [index]);
+    
     const prevSlide = () => {
-        if(currentSlide !== currentSet[index].id){
-            setCurrentSlide(currentSet[index - 1].id);
-            setIndex(index - 1);
+        // owlSlider.current.prev();
+        // if(selectedIndex === 0){
+        //     selectedIndex = currentSet.length - 1;
+        // } else {
+        //     selectedIndex--;
+        // }
+        // console.log("Ran prevSlide(), current index:" + selectedIndex);
+
+        if(index === 0){
+            setIndex(currentSet.length -1)
         } else {
-            setCurrentSlide(currentSet[currentSet.length -1].id);
-            setIndex(currentSet.length -1);
+            setIndex(index - 1)
         }
-        owlSlider.current.prev();
-        console.log(currentSlide);
+
     }
 
-    function nextSlide() {
-        console.log(currentSet[index].background); 
-        if(currentSlide !== currentSet[currentSet.length -1].id){
-            setCurrentSlide(currentSet[index + 1].id);
-            setIndex(index + 1);
+    const nextSlide = () => {
+        // owlSlider.current.next();
+        // if(selectedIndex === currentSet.length - 1)
+        // {
+        //     selectedIndex = 0;
+        // } else {
+        //     selectedIndex++;            
+        // }
+
+        if(index === currentSet.length -1){
+            setIndex(0)
         } else {
-            setCurrentSlide(currentSet[0].id);
-            setIndex(0);
+            setIndex(index + 1)
         }
-        console.log(currentSlide);
-        console.log(currentSet[index].background); 
-        owlSlider.current.next();
+
+        // console.log("Ran nextSlide(), current index:" + selectedIndex);
     }
 
+    // const handleChange = (e) => {
+    //     // console.log(e.item.index);
 
-    const handleChange = (e) => {
-        // console.log(e.item.index);
-
-        // Not the best solution
-        let currentIndex = e.item.index;
-        let currentElement = e.relatedTarget.$stage.children()[currentIndex].childNodes[0].id;
-        setCurrentSlide(currentElement);
-        //console.log(e.relatedTarget.$stage.children()[currentIndex].childNodes[0])
-        console.log(currentElement);
-    }
+    //     // Not the best solution
+    //     let currentIndex = e.item.index;
+    //     let currentElement = e.relatedTarget.$stage.children()[currentIndex].childNodes[0].id;
+    //     // setCurrentSlide(currentElement);
+    //     //console.log(e.relatedTarget.$stage.children()[currentIndex].childNodes[0])
+    //     console.log(currentElement);
+    // }
 
     const switchSet = (e) => {
         e.preventDefault();
         if(e.target.className === 'btn-1 ' && currentSet !== basicTemplates){
             setCurrentSet(basicTemplates);
-            setCurrentSlide(basicTemplates[0].id);
+            // setCurrentSlide(basicTemplates[0].id);
         } else if(e.target.className === 'btn-2 ' && currentSet !== artTemplates){
             setCurrentSet(artTemplates);
-            setCurrentSlide(artTemplates[0].id);
+            // setCurrentSlide(artTemplates[0].id);
         }
     }
 
@@ -96,7 +120,7 @@ const CardBackgroundCarousel = () => {
                 <button className={`btn-2 ${currentSet === artTemplates ? 'isactive' : ''}`} onClick={switchSet}>2</button>
             </div>
             <div className="navButtons">
-                <button className='btn-left' onClick={() => {owlSlider.current.prev()}}><i className="fa fa-angle-left"></i></button>
+                <button className='btn-left' onClick={prevSlide}><i className="fa fa-angle-left"></i></button>
                 <button className='btn-right' onClick={nextSlide}><i className="fa fa-angle-right"></i></button>
             </div>
             {currentSet===basicTemplates &&
