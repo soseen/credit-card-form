@@ -17,13 +17,8 @@ import 'font-awesome/css/font-awesome.min.css';
 const CardBackgroundCarousel = () => {
 
     let selectedIndex = 0;
-    let oldIndex = 0;
     const owlSlider = useRef();
     const [currentSet, setCurrentSet] = useState(artTemplates);
-    const [index, setIndex] = useState(0);
-    // const [desiredIndex, setDesiredIndex] = useState(0);
-    // const [currentSlide, setCurrentSlide] = useState(currentSet[index].id);
-
 
     const settings = {
         nav: false,
@@ -34,72 +29,39 @@ const CardBackgroundCarousel = () => {
         loop: true,
         center: true,
         autoWidth: true,
-        margin: 30
+        margin: 30,
       }
     
-    useEffect(()=> {
-        console.log(index)
-        return () => {
-            if(index > oldIndex){
-                console.log('index after right' + index)
-                owlSlider.current.next()
-                oldIndex = index;
-                console.log('old index: ' + oldIndex)
-            } else if (index < oldIndex){
-                console.log(index)
-                owlSlider.current.prev()
-                oldIndex = index;
-            } else {
-                console.log('nic nie rob')
-            }
-        }
-    }, [index]);
-    
     const prevSlide = () => {
-        // owlSlider.current.prev();
-        // if(selectedIndex === 0){
-        //     selectedIndex = currentSet.length - 1;
-        // } else {
-        //     selectedIndex--;
-        // }
-        // console.log("Ran prevSlide(), current index:" + selectedIndex);
-
-        if(index === 0){
-            setIndex(currentSet.length -1)
+        owlSlider.current.prev();
+        if(selectedIndex === 0){
+            selectedIndex = currentSet.length - 1;
         } else {
-            setIndex(index - 1)
+            selectedIndex--;
         }
+        console.log("Ran prevSlide(), current index:" + selectedIndex);
 
     }
 
     const nextSlide = () => {
-        // owlSlider.current.next();
-        // if(selectedIndex === currentSet.length - 1)
-        // {
-        //     selectedIndex = 0;
-        // } else {
-        //     selectedIndex++;            
-        // }
-
-        if(index === currentSet.length -1){
-            setIndex(0)
+        owlSlider.current.next();
+        if(selectedIndex === currentSet.length - 1)
+        {
+            selectedIndex = 0;
         } else {
-            setIndex(index + 1)
+            selectedIndex++;            
         }
-
-        // console.log("Ran nextSlide(), current index:" + selectedIndex);
+        console.log("Ran nextSlide(), current index:" + selectedIndex);
     }
 
-    // const handleChange = (e) => {
-    //     // console.log(e.item.index);
-
-    //     // Not the best solution
-    //     let currentIndex = e.item.index;
-    //     let currentElement = e.relatedTarget.$stage.children()[currentIndex].childNodes[0].id;
-    //     // setCurrentSlide(currentElement);
-    //     //console.log(e.relatedTarget.$stage.children()[currentIndex].childNodes[0])
-    //     console.log(currentElement);
-    // }
+    const events = {
+        onDragged: function(e) {
+            let currentIndex = e.item.index;
+            let currentSlideID = e.relatedTarget.$stage.children()[currentIndex].childNodes[0].id;;
+            selectedIndex = currentSlideID - 1
+            console.log("Item Dragged, current index:" + selectedIndex);
+        },
+    };
 
     const switchSet = (e) => {
         e.preventDefault();
@@ -127,6 +89,7 @@ const CardBackgroundCarousel = () => {
                 <OwlCarousel
                 options={settings}
                 ref={owlSlider}
+                events={events}
                 >
                     {basicTemplates.map((card) => (
                         <div key={card.id} className='card' id={card.id} style={{
@@ -142,6 +105,7 @@ const CardBackgroundCarousel = () => {
                 <OwlCarousel
                 options={settings}
                 ref={owlSlider}
+                events={events}
                 >
                     {artTemplates.map((card) => (
                         <div key={card.id} className='card' id={card.id} style={{
