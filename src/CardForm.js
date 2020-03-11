@@ -18,6 +18,7 @@ const CardForm = ({chosenTemplate}) => {
     const input2 = useRef();
     const input3 = useRef();
     const input4 = useRef();
+    const cardHolder = useRef();
 
     const inputs = [input1, input2, input3, input4];
 
