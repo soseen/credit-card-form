@@ -72,14 +72,14 @@ const CardForm = ({chosenTemplate}) => {
             {chosenTemplate === null && 
                 <div> 
                     <h2>No template chosen</h2>
-                    <Link to="/">
+                    <Link to="/credit-card-form/">
                         <button className='btn-choose-template'>Choose Template</button>
                     </Link>
                 </div>
             }
             {chosenTemplate &&
                 <div>   
-                        <Link to="/">
+                        <Link to="/credit-card-form/">
                         <button className='btn-return'><i className="fa fa-undo"></i></button>
                         </Link>
                         <h1>Insert details</h1>

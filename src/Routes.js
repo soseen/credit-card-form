@@ -21,10 +21,10 @@ const Routes = () => {
       <Switch>
         {/* If the current URL is /about, this route is rendered
             while the rest are ignored */}
-        <Route exact path="/">
+        <Route exact path="/credit-card-form">
           <CardBackgroundCarousel sendTemplate={setTemplate}/>
         </Route>
-        <Route path="/form">
+        <Route path="/credit-card-form/form">
           <CardForm chosenTemplate={currentTemplate} />
         </Route>
       </Switch>
