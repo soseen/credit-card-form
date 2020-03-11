@@ -1,6 +1,5 @@
 import white from './bg/white.jpg';
 import black from './bg/black.jpg';
-import blue from './bg/blue.jpg';
 import green from './bg/green.jpg';
 import darkBlue from './bg/dark-blue.jpg';
 import worldMap from './bg/world.jpg';

@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import './CardBackgroundCarousel.css';
+import './CreditCard.css';
 import { useState } from 'react';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
@@ -7,14 +8,14 @@ import 'owl.carousel/dist/assets/owl.theme.default.min.css';
 // import OwlCarousel from 'react-owl-carousel';
 import artTemplates from './artTemplates';
 import basicTemplates from './basicTemplates';
-import TinySlider from 'tiny-slider-react'
 import OwlCarousel from 'react-owl-carousel2';
 import 'react-owl-carousel2/src/owl.carousel.css'
 import 'react-owl-carousel2/lib/styles.css'
 import 'font-awesome/css/font-awesome.min.css';
+import {Link} from 'react-router-dom';
 
 
-const CardBackgroundCarousel = () => {
+const CardBackgroundCarousel = ({sendTemplate}) => {
 
     let selectedIndex = 0;
     const owlSlider = useRef();
@@ -74,6 +75,10 @@ const CardBackgroundCarousel = () => {
         }
     }
 
+    const chooseTemplate = (e) => {
+        sendTemplate(currentSet[selectedIndex])
+    }
+
     return(
         <div className="carousel-container">
             <h1>Choose template</h1>
@@ -117,7 +122,9 @@ const CardBackgroundCarousel = () => {
                     ))}
             </OwlCarousel>
             }
-            <button className="btn-proceed">Proceed</button>
+            <Link to="/form">
+                <button className="btn-proceed" onClick={chooseTemplate}>Proceed</button>
+            </Link>
         </div>
     );
 
