@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import './CreditCard.css';
 import './CardForm.css'
 import { Link } from 'react-router-dom';
@@ -6,6 +6,49 @@ import mastercardLogo from './icons/mastercard.png'
 import chip from './icons/chip.png'
 
 const CardForm = ({chosenTemplate}) => {
+
+    const [value1, setValue1] = useState('');
+    const [value2, setValue2] = useState('');
+    const [value3, setValue3] = useState('');
+    const [value4, setValue4] = useState('');
+
+    const [currentInputValue, setCurrentInputValue] = useState('');
+
+    const input1 = useRef();
+    const input2 = useRef();
+    const input3 = useRef();
+    const input4 = useRef();
+
+    const inputs = [input1, input2, input3, input4];
+
+    const [refIndex, setRefIndex] = useState(0);
+    const [currentRef, setCurrentRef] = useState(inputs[0]);
+
+    useEffect(() => {
+        console.log(currentInputValue)
+        console.log(currentInputValue.length);
+        if(currentInputValue.length === currentRef.current.maxLength && refIndex < inputs.length - 1){
+            inputs[refIndex + 1].current.focus();
+            setCurrentInputValue('');
+        }
+
+    }, [currentInputValue, currentRef, inputs, refIndex])
+
+    const handleInput = (e, index) => {
+        setRefIndex(index);
+        setCurrentRef(inputs[index]);
+
+        setCurrentInputValue(e.target.value)
+        if(index === 0){
+            setValue1(e.target.value);
+        } else if(index === 1) {
+            setValue2(e.target.value);
+        } else if(index === 2) {
+            setValue3(e.target.value);
+        } else if(index === 3) {
+            setValue4(e.target.value);
+        }
+    }
     
     return(
         <div className='form-container'>
@@ -20,7 +63,7 @@ const CardForm = ({chosenTemplate}) => {
             {chosenTemplate &&
                 <div>   
                         <Link to="/">
-                        <button className='btn-return'><i class="fa fa-undo"></i></button>
+                        <button className='btn-return'><i className="fa fa-undo"></i></button>
                         </Link>
                         <h1>Insert details</h1>
                         <div className='card'style={{
@@ -31,7 +74,7 @@ const CardForm = ({chosenTemplate}) => {
                             <div className="card-details-wrapper">
                                     <img src={chip} className='card-chip' alt='chip'></img>
                                     <img src={mastercardLogo} className='card-logo' alt='mastercard'></img>
-                                    <div className='card-number'>5698 4536 0678 0238</div>
+                                    <div className='card-number'>{value1}{' '}{value2}{' '}{value3}{' '}{value4}</div>
                                 <div className='details-row'>
                                     <div className='details-column'>
                                         <div className='details-card-holder'>Card Holder</div>
@@ -50,7 +93,20 @@ const CardForm = ({chosenTemplate}) => {
                         <div className='input-row'>
                             <div className='input-column'>
                                 <label className='card-input-label'>Card Number</label>
-                                <input type='number' id='cardNumber'></input>
+                                <div className='input-row'>
+                                    <div className='input-column'>
+                                        <input type='text' className='cardNumber' name='input1' maxLength={4} ref={input1} onChange={e => handleInput(e, 0)} value={value1}></input>
+                                    </div>
+                                    <div className='input-column'>
+                                        <input type='text' className='cardNumber' name='input2' maxLength={4} ref={input2} onChange={e => handleInput(e, 1)} value={value2}></input>
+                                    </div>
+                                    <div className='input-column'>
+                                        <input type='text' className='cardNumber' name='input3' maxLength={4} ref={input3} onChange={e => handleInput(e, 2)} value={value3}></input>
+                                    </div>
+                                    <div className='input-column'>
+                                        <input type='text' className='cardNumber' name='input4' maxLength={4} ref={input4} onChange={e => handleInput(e, 3)} value={value4}></input>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className='input-row'>
