@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/credit-card-form/precache-manifest.733b021e7f091ab1e925ff0c777ba064.js"
+  "/credit-card-form/precache-manifest.3111e9a31a8a2ca0045e0410687f2f1b.js"
 );
 
 self.addEventListener('message', (event) => {
