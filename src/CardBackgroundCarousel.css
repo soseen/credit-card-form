@@ -5,28 +5,17 @@
 .carousel-container h1{
     margin: 50px auto;
     font-size: 58px;
-    color: white;
-    text-shadow: 2px 1px black;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 1px white;
 }
 
 .owl-carousel {
 }
 
 .owl-stage-outer {
-    height: 360px;
+    height: 380px;
 }
 
-.owl-nav {
-    font-size: 90px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 50%;
-    height: 80px;
-    justify-content: space-evenly;
-    margin: auto;
-}
 
 .owl-nav button:hover {
     background-color: unset !important;

@@ -55,14 +55,21 @@
 
 
 .credit-card-form{
-    max-width: 600px;
-    background-color: #2d2d2d;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    width: 80vw;
+    max-width: 700px;
+    background-color: #ffffff;
     border-radius: 5px;
     margin: 20px auto;
     margin-bottom: 300px;
-    -moz-box-shadow: 0px 5px 25px rgba(0,0,0,.6);
-    -webkit-box-shadow: 0px 5px 25px rgba(0,0,0,.6);
-    box-shadow: 0px 5px 25px rgba(0,0,0,.6);
+    -moz-box-shadow: 0px 15px 25px rgba(0,0,0,.8);
+    -webkit-box-shadow: 0px 15px 25px rgba(0,0,0,.8);
+    box-shadow: 0px 15px 25px rgba(0,0,0,.8);
+    display: flex;
+    z-index: -1;
 }
 
 .card-logo {
@@ -82,8 +89,9 @@
 }
 
 .inputs-wrapper {
+    margin-top: 250px;
     padding: 15px;
-    color: #f8c007;
+    color: #222222;
     font-weight: 500;
 }
 
@@ -101,13 +109,15 @@
 }
 
 label{
-    margin-bottom: 12px;
-    font-size: 22px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
 }
 
 input, select{
-    background: #222222;
-    border: none;
+    background: none;
+    border: 1px solid #22222240;
     border-radius: 5px;
     outline: none;
     width: 100%;
@@ -117,17 +127,17 @@ input, select{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
-    font-weight: lighter;
+    font-weight: 600;
     transition: all 0.4s;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     text-align: left;
+    color: #2d2d2d;   
 }
 
 input:focus, select:focus{
-    background-color: #f8c007;
-    color: black;
+    border: 1px solid #f8c007;
 }
 
 select {
@@ -156,15 +166,14 @@ select {
     font-weight: bold;
     border-radius: 5px;
     border: none;
-    background-color: #ffffff;
+    background-color: #f8c007;
     outline: none;
     cursor: pointer;
-    box-shadow: 0 4px #222222;
     transition: background-color 0.4s;
 }
 
 .btn-submit:hover {
-    background-color: #f8c007;
+    background-color: #ca9b02;
 }
 
 .btn-submit:active {
@@ -191,4 +200,11 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+    input, select {
+        font-size: 14px;
+    }
 }

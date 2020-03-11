@@ -11,6 +11,9 @@ const CardForm = ({chosenTemplate}) => {
     const [value2, setValue2] = useState('');
     const [value3, setValue3] = useState('');
     const [value4, setValue4] = useState('');
+    const [name, setName] = useState('');
+    const [month, setMonth] = useState('');
+    const [year, setYear] = useState('');
 
     const [currentInputValue, setCurrentInputValue] = useState('');
 
@@ -19,8 +22,10 @@ const CardForm = ({chosenTemplate}) => {
     const input3 = useRef();
     const input4 = useRef();
     const cardHolder = useRef();
+    const cardMonth = useRef();
+    const cardYear = useRef();
 
-    const inputs = [input1, input2, input3, input4];
+    const inputs = [input1, input2, input3, input4, cardHolder, cardMonth, cardYear];
 
     const [refIndex, setRefIndex] = useState(0);
     const [currentRef, setCurrentRef] = useState(inputs[0]);
@@ -28,8 +33,9 @@ const CardForm = ({chosenTemplate}) => {
     useEffect(() => {
         console.log(currentInputValue)
         console.log(currentInputValue.length);
-        if(currentInputValue.length === currentRef.current.maxLength && refIndex < inputs.length - 1){
+        if(currentInputValue.length === currentRef.current.maxLength && refIndex < 4){
             inputs[refIndex + 1].current.focus();
+        } else {
             setCurrentInputValue('');
         }
 
@@ -39,16 +45,26 @@ const CardForm = ({chosenTemplate}) => {
         setRefIndex(index);
         setCurrentRef(inputs[index]);
 
-        setCurrentInputValue(e.target.value)
         if(index === 0){
             setValue1(e.target.value);
+            setCurrentInputValue(e.target.value)
         } else if(index === 1) {
             setValue2(e.target.value);
+            setCurrentInputValue(e.target.value)
         } else if(index === 2) {
             setValue3(e.target.value);
+            setCurrentInputValue(e.target.value)
         } else if(index === 3) {
             setValue4(e.target.value);
-        }
+            setCurrentInputValue(e.target.value)
+        } else if(index === 4) {
+            setName(e.target.value);
+            setCurrentInputValue(e.target.value)
+        } else if(index === 5) {
+            setMonth(e.target.value);
+        } else if(index === 6) {
+            setYear(e.target.value);
+        }   
     }
     
     return(
@@ -79,11 +95,11 @@ const CardForm = ({chosenTemplate}) => {
                                 <div className='details-row'>
                                     <div className='details-column'>
                                         <div className='details-card-holder'>Card Holder</div>
-                                        <div className='card-holder'>Adam Kowalski</div>
+                                        <div className='card-holder'>{name}</div>
                                     </div>
                                     <div className='details-column'>
                                         <div className='details-card-expires'>Expires</div>
-                                        <div className='card-expires'>12/20</div>
+                                        <div className='card-expires'>{month}{'/'}{year}</div>
                                     </div>
                                 </div>
                             </div>
@@ -113,22 +129,22 @@ const CardForm = ({chosenTemplate}) => {
                         <div className='input-row'>
                             <div className='input-column'>
                                 <label className='card-input-label'>Card Holder</label>
-                                <input type='text' id='cardHolder'></input>
+                                <input type='text' id='cardHolder' ref={cardHolder} maxLength={30} onChange={e => handleInput(e, 4)} value={name}></input>
                             </div>
                         </div>
                         <div className='input-row'>
                             <div className='input-column'>
                                 <label className='card-input-label'>Month</label>
-                                <select name="month" id="month">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
+                                <select name="month" id="month" ref={cardMonth} onChange={e => handleInput(e, 5)} value={month}>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>
                                     <option value="10">10</option>
                                     <option value="11">11</option>
                                     <option value="12">12</option>
@@ -136,7 +152,7 @@ const CardForm = ({chosenTemplate}) => {
                             </div>
                             <div className='input-column'>
                                 <label className='card-input-label'>Year</label>
-                                <select name="year" id="year">
+                                <select name="year" id="year" ref={cardYear} onChange={e => handleInput(e, 6)} value={year}>
                                     <option value="2020">2020</option>
                                     <option value="2021">2021</option>
                                     <option value="2022">2022</option>

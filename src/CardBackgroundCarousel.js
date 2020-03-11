@@ -122,7 +122,7 @@ const CardBackgroundCarousel = ({sendTemplate}) => {
                     ))}
             </OwlCarousel>
             }
-            <Link to="/credit-card-form/form">
+            <Link to="/form">
                 <button className="btn-proceed" onClick={chooseTemplate}>Proceed</button>
             </Link>
         </div>
