@@ -5,7 +5,6 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Exo 2', sans-serif;
-    position: relative;
 }
 
 .form-container h1{
@@ -57,12 +56,12 @@
 
 
 .credit-card-form{
-    position: fixed;
-    top: 60%;
+    position: absolute;
+    top: 350px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     width: 80vw;
-    max-width: 700px;
+    max-width: 600px;
     background-color: #ffffff;
     border-radius: 5px;
     margin: 20px auto;
@@ -194,10 +193,28 @@ input::-webkit-inner-spin-button {
     input, select {
         font-size: 14px;
     }
-    .credit-card-form {
-        width: 80%;
+
+    .btn-return {
+        top: 1vh;
+        left: 1vw;
     }
+
     .btn-return i {
         font-size: 30px;
     }
+
+    .form-container h1{
+        font-size: 40px;
+    }
+
+    .inputs-wrapper {
+        margin-top: 100px;
+    }
 }
+
+@media screen and (max-width: 430px) {
+    .credit-card-form {
+        top: 250px;
+    }
+}
+
