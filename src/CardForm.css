@@ -210,6 +210,10 @@ input::-webkit-inner-spin-button {
     .inputs-wrapper {
         margin-top: 100px;
     }
+
+    .credit-card-form { 
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 430px) {

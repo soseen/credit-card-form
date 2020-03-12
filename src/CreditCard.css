@@ -118,6 +118,23 @@
         width: 310px;
         height: 200px;
     }
+    .card-number {
+        font-size: 15px;
+    }
+
+    .details-card-holder,
+    .details-card-expires { 
+        font-size: 10px;
+    }
+
+    .card-holder,
+    .card-expires {
+        font-size: 14px;
+    }
+
+    .details-column {
+        margin-bottom: 15px;
+    }
 }
 
 
