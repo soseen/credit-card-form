@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ac222d92d81170ce006b38d72f650795",
+    "revision": "1f6c48d1f3611defc6c1968ba45090a5",
     "url": "/credit-card-form/index.html"
   },
   {
-    "revision": "6a5c46f76c6aed7254fe",
+    "revision": "eed3545f0ac5c20ba42b",
     "url": "/credit-card-form/static/css/2.ab9d96b5.chunk.css"
   },
   {
-    "revision": "07a99c4079869a81b78d",
-    "url": "/credit-card-form/static/css/main.69b1a4f3.chunk.css"
+    "revision": "610bff10420fe572ad5e",
+    "url": "/credit-card-form/static/css/main.e35bdbf6.chunk.css"
   },
   {
-    "revision": "6a5c46f76c6aed7254fe",
-    "url": "/credit-card-form/static/js/2.9f149817.chunk.js"
+    "revision": "eed3545f0ac5c20ba42b",
+    "url": "/credit-card-form/static/js/2.3094cb46.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/credit-card-form/static/js/2.9f149817.chunk.js.LICENSE.txt"
+    "url": "/credit-card-form/static/js/2.3094cb46.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "07a99c4079869a81b78d",
-    "url": "/credit-card-form/static/js/main.7b835722.chunk.js"
+    "revision": "610bff10420fe572ad5e",
+    "url": "/credit-card-form/static/js/main.1dfa5272.chunk.js"
   },
   {
     "revision": "473bc3b3f59f8627302e",
@@ -46,10 +46,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4b0ac562a5771291c336939cee64b155",
     "url": "/credit-card-form/static/media/carnaval.4b0ac562.jpg"
-  },
-  {
-    "revision": "01911ff13264cbc5f83013ebe4e23ed5",
-    "url": "/credit-card-form/static/media/city.01911ff1.jpg"
   },
   {
     "revision": "d9193d813d26dc4c63e4772549210deb",
@@ -86,6 +82,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "507636ae653d8a005f790e6cf308c4a4",
     "url": "/credit-card-form/static/media/green.507636ae.jpg"
+  },
+  {
+    "revision": "6a0526641aef72e44337bc90c7028706",
+    "url": "/credit-card-form/static/media/leafs.6a052664.jpg"
+  },
+  {
+    "revision": "3991f26fd5d5e67aa0f4bc3c5900810d",
+    "url": "/credit-card-form/static/media/map1.3991f26f.jpg"
   },
   {
     "revision": "be55b7bb06d558d02e82378a31ba5bcf",
