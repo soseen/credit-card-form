@@ -5,15 +5,15 @@
 .carousel-container h1{
     margin: 50px auto;
     font-size: 58px;
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 1px white;
+    color: white;
+    text-shadow: 2px 1px black;
 }
 
 .owl-carousel {
 }
 
 .owl-stage-outer {
-    height: 380px;
+    height: 350px;
 }
 
 
@@ -40,8 +40,7 @@
 } */
 
 .btn-proceed {
-    margin-top: 80px;
-    margin-bottom: 100px;
+    margin: 80px auto;
     width: 200px;
     height: 60px;
     display: inline-block;
@@ -128,4 +127,21 @@
 
 .navButtons button:hover {
     opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .btn-proceed {
+        margin: 20px auto;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .btn-proceed {
+        margin: 20px auto;
+    }
+
+    .owl-stage-outer {
+        height: 250px;
+    }
 }

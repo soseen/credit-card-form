@@ -1,4 +1,4 @@
-import city from './bg/city.jpg';
+import leafs from './bg/leafs.jpg';
 import water from './bg/water.jpg';
 import car from './bg/car.jpg';
 import carnaval from './bg/carnaval.jpg';
@@ -11,7 +11,7 @@ import space from './bg/space.jpg';
 const artTemplates = [
     {
         id: 1,
-        background: `url(${city})`
+        background: `url(${space})`
     },
     {
         id: 2,
@@ -43,7 +43,7 @@ const artTemplates = [
     },
     {
         id: 9,
-        background: `url(${space})`
+        background: `url(${leafs})`
     }
 ];
 

@@ -155,16 +155,12 @@ select {
     background-color: #f8c007;
     outline: none;
     cursor: pointer;
-    transition: background-color 0.4s;
+    transition: background-color 0.2s;
 }
 
-.btn-submit:hover {
-    background-color: #ca9b02;
-}
 
 .btn-submit:active {
-    transform: translateY(4px);
-    box-shadow: none;
+    background-color: #80bfca;
 }
 
 /* .fa-caret-down{

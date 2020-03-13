@@ -5,6 +5,8 @@ import darkBlue from './bg/dark-blue.jpg';
 import worldMap from './bg/world.jpg';
 import abstract from './bg/abstract.jpg';
 import cyber from './bg/cyber.jpg';
+import golden from './bg/royal.jpg';
+
 
 
 const basicTemplates = [
@@ -30,10 +32,14 @@ const basicTemplates = [
     },
     {
         id: 6,
-        background: `url(${cyber})`
+        background: `url(${golden})`
     },
     {
         id: 7,
+        background: `url(${cyber})`
+    },
+    {
+        id: 8,
         background: `url(${worldMap})`
     }
 ];
