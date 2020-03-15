@@ -108,10 +108,10 @@
 .navButtons {
     margin: auto;
     display: flex;
-    width: 60vw;
+    width: 60%;
     justify-content: space-between;
     transition: all 1s;
-    margin-bottom: 50px;
+    margin: 10px auto;
 }
 
 
@@ -120,7 +120,7 @@
     border: none;
     background: none;
     outline: none;
-    font-size: 5.5rem;
+    font-size: 70px;
     color: black;
     opacity: 0.4;
 }
@@ -131,18 +131,26 @@
 
 @media screen and (max-width: 800px) {
     .btn-proceed {
-        margin: 20px auto;
+        margin: 10px auto;
     }
 
     .carousel-container h1{
         font-size: 40px;
     }
 
+    .navButtons button{
+        font-size: 50px;
+    }
+
 }
 
 @media screen and (max-width: 430px) {
     .btn-proceed {
-        margin: 20px auto;
+        margin: 10px auto;
+    }
+
+    .carousel-container h1{
+        font-size: 35px;
     }
 
     .owl-stage-outer {
