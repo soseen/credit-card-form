@@ -201,8 +201,7 @@
     }
 
     .card-back-wrapper .info {
-        font-size: 8px;
-        color: brown;
+        font-size: 10px;
     }
 
     .cvv-bar p {
@@ -245,8 +244,7 @@
     }
 
     .card-back-wrapper .info {
-        font-size: 7px;
-        color: blue;
+        font-size: 8px;
     }
 
     .cvv-bar p {
