@@ -58,9 +58,8 @@ const CardBackgroundCarousel = ({sendTemplate}) => {
     const events = {
         onDragged: function(e) {
             let currentIndex = e.item.index;
-            let currentSlideID = e.relatedTarget.$stage.children()[currentIndex].childNodes[0].id;;
+            let currentSlideID = e.relatedTarget.$stage.children()[currentIndex].childNodes[0].childNodes[0].id
             selectedIndex = currentSlideID - 1
-            console.log("Item Dragged, current index:" + selectedIndex);
         },
     };
 
@@ -97,11 +96,13 @@ const CardBackgroundCarousel = ({sendTemplate}) => {
                 events={events}
                 >
                     {basicTemplates.map((card) => (
-                        <div key={card.id} className='card' id={card.id} style={{
-                            backgroundImage: card.background,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center'
-                            }}>
+                        <div className='card-wrapper'>
+                            <div key={card.id} className='card' id={card.id} style={{
+                                backgroundImage: card.background,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center'
+                                }}>
+                            </div>
                         </div>
                     ))}
                 </OwlCarousel>
@@ -113,11 +114,13 @@ const CardBackgroundCarousel = ({sendTemplate}) => {
                 events={events}
                 >
                     {artTemplates.map((card) => (
-                        <div key={card.id} className='card' id={card.id} style={{
-                            backgroundImage: card.background,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center'
-                            }}>
+                        <div className='card-wrapper'>
+                            <div key={card.id} className='card' id={card.id} style={{
+                                backgroundImage: card.background,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center'
+                                }}>
+                            </div>
                         </div>
                     ))}
             </OwlCarousel>

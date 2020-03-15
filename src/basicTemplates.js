@@ -12,35 +12,43 @@ import worldMap1 from './bg/map1.jpg';
 const basicTemplates = [
     {
         id: 1,
-        background: `url(${white})`
+        background: `url(${white})`,
+        backfaceColor: null
     },
     {
         id: 2,
-        background: `url(${darkBlue})`
+        background: `url(${darkBlue})`,
+        backfaceColor: null
     },
     {
         id: 3,
-        background: `url(${black})`
+        background: `url(${black})`,
+        backfaceColor: null
     },
     {
         id: 4,
-        background: `url(${green})`
+        background: `url(${green})`,
+        backfaceColor: null
     },
     {
         id: 5,
-        background: `url(${abstract})`
+        background: `url(${abstract})`,
+        backfaceColor: null
     },
     {
         id: 6,
-        background: `url(${worldMap1})`
+        background: `url(${worldMap1})`,
+        backfaceColor: null
     },
     {
         id: 7,
-        background: `url(${cyber})`
+        background: `url(${cyber})`,
+        backfaceColor: null
     },
     {
         id: 8,
-        background: `url(${worldMap})`
+        background: `url(${worldMap})`,
+        backfaceColor: null
     }
 ];
 

@@ -14,6 +14,7 @@ const CardForm = ({chosenTemplate}) => {
     const [name, setName] = useState('');
     const [month, setMonth] = useState('01');
     const [year, setYear] = useState('20');
+    const [cvv, setCvv] = useState('');
 
     const [currentInputValue, setCurrentInputValue] = useState('');
 
@@ -24,8 +25,9 @@ const CardForm = ({chosenTemplate}) => {
     const cardHolder = useRef();
     const cardMonth = useRef();
     const cardYear = useRef();
+    const cardCVV = useRef();
 
-    const inputs = [input1, input2, input3, input4, cardHolder, cardMonth, cardYear];
+    const inputs = [input1, input2, input3, input4, cardHolder, cardMonth, cardYear, cardCVV];
 
     const [refIndex, setRefIndex] = useState(0);
     const [currentRef, setCurrentRef] = useState(inputs[0]);
@@ -35,16 +37,11 @@ const CardForm = ({chosenTemplate}) => {
         console.log(currentInputValue.length);
         if(currentInputValue.length === currentRef.current.maxLength && refIndex < 4){
             inputs[refIndex + 1].current.focus();
-        } else {
-            setCurrentInputValue('');
         }
-
+            setCurrentInputValue('');
     }, [currentInputValue, currentRef, inputs, refIndex])
 
     const handleInput = (e, index) => {
-        setRefIndex(index);
-        setCurrentRef(inputs[index]);
-
         if(index === 0){
             setValue1(e.target.value);
             setCurrentInputValue(e.target.value)
@@ -64,7 +61,15 @@ const CardForm = ({chosenTemplate}) => {
             setMonth(e.target.value);
         } else if(index === 6) {
             setYear(e.target.value);
+        } else if(index === 7) {
+            setCvv(e.target.value);
         }   
+    }
+
+    const handleFocus = (e, index) => {
+        setRefIndex(index);
+        setCurrentRef(inputs[index]);
+        console.log(chosenTemplate.backfaceColor)
     }
     
     return(
@@ -83,32 +88,44 @@ const CardForm = ({chosenTemplate}) => {
                     <button className='btn-return'><i className="fa fa-undo"></i></button>
                     </Link>
                     <h1>Insert details</h1>
-                    <div className='card'style={{
-                        backgroundImage: chosenTemplate.background,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center'
-                        }}>
-                        <div className="card-details-wrapper">
-                            <img src={chip} className='card-chip' alt='chip'></img>
-                            <img src={mastercardLogo} className='card-logo' alt='mastercard'></img>
-                            <div className='card-number'>
-                                <div className='digits-wrapper'>{value1}</div>
-                                <div className='digits-wrapper'>{value2}</div>
-                                <div className='digits-wrapper'>{value3}</div>
-                                <div className='digits-wrapper'>{value4}</div>
-                            </div>
-                            <div className='details-row'>
-                                <div className='details-column'>
-                                    <div className='details-card-holder'>Card Holder</div>
-                                    <div className='card-holder'>{name}</div>
+                    <div className='card-wrapper'>
+                        <div className={`card ${currentRef === cardCVV ? 'hidden-card' : 'active-card'}`} style={{
+                            backgroundImage: chosenTemplate.background
+                            }}>
+                            <div className="card-front-wrapper">
+                                <img src={chip} className='card-chip' alt='chip'></img>
+                                <img src={mastercardLogo} className='card-logo' alt='mastercard'></img>
+                                <div className='card-number'>
+                                    <div className='digits-wrapper'>{value1}</div>
+                                    <div className='digits-wrapper'>{value2}</div>
+                                    <div className='digits-wrapper'>{value3}</div>
+                                    <div className='digits-wrapper'>{value4}</div>
                                 </div>
-                                <div className='details-column'>
-                                    <div className='details-card-expires'>Expires</div>
-                                    <div className='card-expires'>{month}{'/'}{year}</div>
+                                <div className='details-row'>
+                                    <div className='details-column'>
+                                        <div className='details-card-holder'>Card Holder</div>
+                                        <div className='card-holder'>{name}</div>
+                                    </div>
+                                    <div className='details-column'>
+                                        <div className='details-card-expires'>Expires</div>
+                                        <div className='card-expires'>{month}{'/'}{year}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div className={`card-back ${currentRef === cardCVV ? 'active-card' : 'hidden-card'}`} style={chosenTemplate.backfaceColor ? {
+                            backgroundColor: chosenTemplate.backfaceColor
+                        } : {
+                            backgroundImage: chosenTemplate.background,
+                        }}>
+                            <div className='card-back-wrapper'>
+                                <div className='swipe-bar'></div>
+                                <div className='cvv-bar'><p>{cvv}</p></div>
+                                <p className='info'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, corporis ex. Deleniti, at nulla. Cumque maxime expedita accusamus ipsa, officiis dicta sed velit eveniet molestiae similique eum, porro doloribus nobis.</p>
+                            </div>
+                        </div> 
                     </div>
+                    
 
                     <div className='credit-card-form'>
                         <div className='inputs-wrapper'>
@@ -117,16 +134,16 @@ const CardForm = ({chosenTemplate}) => {
                                     <label className='card-input-label'>Card Number</label>
                                     <div className='input-row'>
                                         <div className='input-column'>
-                                            <input type='text' className='cardNumber' name='input1' maxLength={4} ref={input1} onChange={e => handleInput(e, 0)} value={value1}></input>
+                                            <input type='text' className='cardNumber' name='input1' maxLength={4} ref={input1} onFocus={e => handleFocus(e, 0)} onChange={e => handleInput(e, 0)} value={value1}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='cardNumber' name='input2' maxLength={4} ref={input2} onChange={e => handleInput(e, 1)} value={value2}></input>
+                                            <input type='text' className='cardNumber' name='input2' maxLength={4} ref={input2} onFocus={e => handleFocus(e, 1)} onChange={e => handleInput(e, 1)} value={value2}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='cardNumber' name='input3' maxLength={4} ref={input3} onChange={e => handleInput(e, 2)} value={value3}></input>
+                                            <input type='text' className='cardNumber' name='input3' maxLength={4} ref={input3} onFocus={e => handleFocus(e, 2)} onChange={e => handleInput(e, 2)} value={value3}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='cardNumber' name='input4' maxLength={4} ref={input4} onChange={e => handleInput(e, 3)} value={value4}></input>
+                                            <input type='text' className='cardNumber' name='input4' maxLength={4} ref={input4} onFocus={e => handleFocus(e, 3)} onChange={e => handleInput(e, 3)} value={value4}></input>
                                         </div>
                                     </div>
                                 </div>
@@ -134,13 +151,13 @@ const CardForm = ({chosenTemplate}) => {
                             <div className='input-row'>
                                 <div className='input-column'>
                                     <label className='card-input-label'>Card Holder</label>
-                                    <input type='text' id='cardHolder' ref={cardHolder} maxLength={30} onChange={e => handleInput(e, 4)} value={name}></input>
+                                    <input type='text' id='cardHolder' ref={cardHolder} maxLength={30} onFocus={e => handleFocus(e, 4)} onChange={e => handleInput(e, 4)} value={name}></input>
                                 </div>
                             </div>
                             <div className='input-row'>
                                 <div className='input-column'>
                                     <label className='card-input-label'>Month</label>
-                                    <select name="month" id="month" ref={cardMonth} onChange={e => handleInput(e, 5)} value={month}>
+                                    <select name="month" id="month" ref={cardMonth} onFocus={e => handleFocus(e, 5)} onChange={e => handleInput(e, 5)} value={month}>
                                         <option value="01">1</option>
                                         <option value="02">2</option>
                                         <option value="03">3</option>
@@ -157,7 +174,7 @@ const CardForm = ({chosenTemplate}) => {
                                 </div>
                                 <div className='input-column'>
                                     <label className='card-input-label'>Year</label>
-                                    <select name="year" id="year" ref={cardYear} onChange={e => handleInput(e, 6)} value={year}>
+                                    <select name="year" id="year" ref={cardYear} onFocus={e => handleFocus(e, 6)} onChange={e => handleInput(e, 6)} value={year}>
                                         <option value="20">2020</option>
                                         <option value="21">2021</option>
                                         <option value="22">2022</option>
@@ -171,7 +188,7 @@ const CardForm = ({chosenTemplate}) => {
                                 </div>
                                 <div className='input-column'>
                                     <label className='card-input-label'>CVV</label>
-                                    <input type='text' className='cardCVV'></input>
+                                    <input type='text' ref={cardCVV} className='cardCVV' maxLength={3} onFocus={e => handleFocus(e, 7)} onChange={e => handleInput(e, 7)} value={cvv}></input>
                                 </div>
                             </div>
                             <button className='btn-submit'>Submit</button>    
