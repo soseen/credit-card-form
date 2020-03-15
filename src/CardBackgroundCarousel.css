@@ -134,6 +134,10 @@
         margin: 20px auto;
     }
 
+    .carousel-container h1{
+        font-size: 40px;
+    }
+
 }
 
 @media screen and (max-width: 430px) {
