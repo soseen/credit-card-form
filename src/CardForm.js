@@ -95,18 +95,18 @@ const CardForm = ({chosenTemplate}) => {
                             <div className="card-front-wrapper">
                                 <img src={chip} className='card-chip' alt='chip'></img>
                                 <img src={mastercardLogo} className='card-logo' alt='mastercard'></img>
-                                <div className='card-number'>
+                                <div className={`card-number ${currentRef === input1 || currentRef === input2 || currentRef === input3 || currentRef === input4 ? 'input-highlighted' : ''}`}>
                                     <div className='digits-wrapper'>{value1}</div>
                                     <div className='digits-wrapper'>{value2}</div>
                                     <div className='digits-wrapper'>{value3}</div>
                                     <div className='digits-wrapper'>{value4}</div>
                                 </div>
                                 <div className='details-row'>
-                                    <div className='details-column'>
+                                    <div className={`details-column ${currentRef === cardHolder ? 'input-highlighted' : ''}`}>
                                         <div className='details-card-holder'>Card Holder</div>
                                         <div className='card-holder'>{name}</div>
                                     </div>
-                                    <div className='details-column'>
+                                    <div className={`details-column ${currentRef === cardYear || currentRef === cardMonth ? 'input-highlighted' : ''}`}>
                                         <div className='details-card-expires'>Expires</div>
                                         <div className='card-expires'>{month}{'/'}{year}</div>
                                     </div>
