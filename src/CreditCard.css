@@ -4,6 +4,7 @@
     width: 530px;
     height: 340px;
     display: flex;
+    margin: auto;
 }
 .card, 
 .card-back {
@@ -181,7 +182,34 @@
 .input-highlighted {
     border: 2px solid #2d2d2d;
     border-radius: 5px;
-    transition: all 0.2s;
+    transition: all 0.5s;
+}
+.rotate1 {
+    animation: rotate1 10s linear infinite; 
+    perspective: 100px; 
+}
+
+.rotate2 {
+    animation: rotate2 10s linear infinite;
+    perspective: 100px;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0%{
+        transform: rotateY(-180deg);
+    }
+    100%{
+        transform: rotateY(180deg);
+    }
 }
 
 @media screen and (max-width: 800px) {

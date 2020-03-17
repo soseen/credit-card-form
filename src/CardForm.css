@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
 
 .form-container{
-    display: flex;
     flex-direction: column;
-    align-items: center;
     font-family: 'Exo 2', sans-serif;
 }
 
@@ -24,7 +22,7 @@
     border-radius: 10rem;
     border: none;
     color: #fff;
-    background-color: #f8c007;
+    background-color: #46D7D7;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 600;
@@ -34,9 +32,8 @@
 
 
 .btn-choose-template:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: pointer;
-    background-color: #f8c007;
 }
 
 .btn-return {
@@ -50,7 +47,7 @@
 
 .btn-return i {
     font-size: 70px;
-    color: #f8c007;
+    color: #46D7D7;
     cursor: pointer;
 }
 
@@ -162,16 +159,6 @@ select {
 .btn-submit:active {
     background-color: #80bfca;
 }
-
-/* .fa-caret-down{
-    color: black;
-    font-size: 20px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
- */
 
 
 input[type=number] {

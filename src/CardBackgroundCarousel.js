@@ -15,7 +15,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import {Link} from 'react-router-dom';
 
 
-const CardBackgroundCarousel = ({sendTemplate}) => {
+const CardBackgroundCarousel = ({chooseTemplate}) => {
 
     let selectedIndex = 0;
     const owlSlider = useRef();
@@ -74,8 +74,8 @@ const CardBackgroundCarousel = ({sendTemplate}) => {
         }
     }
 
-    const chooseTemplate = (e) => {
-        sendTemplate(currentSet[selectedIndex])
+    const submitTemplate = (e) => {
+        chooseTemplate(currentSet[selectedIndex])
     }
 
     return(
@@ -126,7 +126,7 @@ const CardBackgroundCarousel = ({sendTemplate}) => {
             </OwlCarousel>
             }
             <Link to="/credit-card-form/form">
-                <button className="btn-proceed" onClick={chooseTemplate}>Proceed</button>
+                <button className="btn-proceed" onClick={submitTemplate}>Proceed</button>
             </Link>
         </div>
     );
