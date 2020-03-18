@@ -7,9 +7,7 @@ import darkBlue from './bg/dark-blue.jpg';
 import worldMap from './bg/world.jpg';
 import abstract from './bg/abstract.jpg';
 import cyber from './bg/cyber.jpg';
-import worldMap1 from './bg/map1.jpg';
 import pink from './bg/pink.jpg';
-import greenBlack from './bg/green-black.jpg';
 import smudges from './bg/smudges.jpg';
 import golden from './bg/golden.jpg';
 
@@ -43,8 +41,8 @@ const basicTemplates = [
     },
     {
         id: 6,
-        background: `url(${worldMap1})`,
-        backfaceColor: '#040435'
+        background: `url(${golden})`,
+        backfaceColor: null
     },
     {
         id: 7,
@@ -68,21 +66,11 @@ const basicTemplates = [
     },
     {
         id: 11,
-        background: `url(${greenBlack})`,
-        backfaceColor: null
-    },
-    {
-        id: 12,
         background: `url(${smudges})`,
         backfaceColor: null
     },
     {
-        id: 13,
-        background: `url(${golden})`,
-        backfaceColor: null
-    },
-    {
-        id: 14,
+        id: 12,
         background: `url(${worldMap})`,
         backfaceColor: '#E1C158'
     }

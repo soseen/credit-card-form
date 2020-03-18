@@ -2,9 +2,7 @@ import leafs from './bg/leafs.jpg';
 import water from './bg/water.jpg';
 import lion from './bg/lion.jpg';
 import carnaval from './bg/carnaval.jpg';
-import theatre from './bg/theatre.jpg';
 import leftovers from './bg/leftovers.jpg';
-import lime from './bg/lime.jpg';
 import wood from './bg/wood.jpg';
 import landscape from './bg/landscape.jpg';
 import fairytale from './bg/fairytale.jpg';
@@ -49,56 +47,46 @@ const artTemplates = [
     },
     {
         id: 7,
-        background: `url(${theatre})`,
-        backfaceColor: null
-    },
-    {
-        id: 8,
         background: `url(${water})`,
         backfaceColor: null
     },
     {
-        id: 9,
+        id: 8,
         background: `url(${wood})`,
         backfaceColor: null
     },
     {
-        id: 10,
+        id: 9,
         background: `url(${fairytale})`,
         backfaceColor: '#0B2757'
     },
     {
-        id: 11,
+        id: 10,
         background: `url(${leafs})`,
         backfaceColor: '#AED98F'
     },
     {
-        id: 12,
+        id: 11,
         background: `url(${heels})`,
         backfaceColor: '#9A0000'
     },
     {
-        id: 13,
+        id: 12,
         background: `url(${balcony})`,
         backfaceColor: '#070922'
     },
     {
-        id: 14,
+        id: 13,
         background: `url(${bean})`,
         backfaceColor: '#62D5C4'
     },
     {
-        id: 15,
+        id: 14,
         background: `url(${lady})`,
         backfaceColor: '#E2E4CF'
     },
     {
-        id: 16,
-        background: `url(${lime})`,
-        backfaceColor: '#017CC2'
-    },
-    {
-        id: 17,
+        id: 15,
         background: `url(${elephant})`,
         backfaceColor: '#A1A1A1'
     }
