@@ -19,7 +19,7 @@
     backface-visibility: hidden;
     background-position: center;
     background-size: cover;
-    transition: all 2s;
+    transition: transform 2s;
 }
 
 .card {
@@ -184,31 +184,50 @@
     border-radius: 5px;
     transition: all 0.5s;
 }
+.static1, .static2,
+.rotate1, .rotate2 {
+    margin-top: 40px;
+}
+
+.static1 {
+    transform: rotate(-15deg) translate(0px, 60px);
+}
+
+.static2 {
+    transform: rotate(25deg) translate(120px, 200px);
+}
+
 .rotate1 {
-    animation: rotate1 10s linear infinite; 
-    perspective: 100px; 
+    animation: rotate1 10s linear infinite;
+    -webkit-animation: rotate1 10s linear infinite;
+    margin-top: 60px;
 }
 
 .rotate2 {
     animation: rotate2 10s linear infinite;
-    perspective: 100px;
+    -webkit-animation: rotate2 10s linear infinite;
+    margin-top: 60px;
 }
 
 @keyframes rotate1 {
-    0% {
-        transform: rotateY(0deg);
+    from{
+        transform: rotateY(0);
+        -webkit-transform: rotateY(0);
     }
-    100%{
+    to{
         transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
     }
 }
 
 @keyframes rotate2 {
-    0%{
+    from{
         transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
     }
-    100%{
+    to{
         transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
     }
 }
 

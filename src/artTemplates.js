@@ -1,17 +1,25 @@
 import leafs from './bg/leafs.jpg';
 import water from './bg/water.jpg';
-import car from './bg/car.jpg';
+import lion from './bg/lion.jpg';
 import carnaval from './bg/carnaval.jpg';
-import feather from './bg/feather.jpg';
 import theatre from './bg/theatre.jpg';
-import mask from './bg/mask.jpg';
-import album from './bg/album.jpg';
-import space from './bg/space.jpg';
+import leftovers from './bg/leftovers.jpg';
+import lime from './bg/lime.jpg';
+import wood from './bg/wood.jpg';
+import landscape from './bg/landscape.jpg';
+import fairytale from './bg/fairytale.jpg';
+import heels from './bg/heels.jpg';
+import lady from './bg/lady.jpg';
+import simpsons from './bg/simpsons.jpg';
+import balcony from './bg/balcony.png';
+import bean from './bg/bean.jpg';
+import elephant from './bg/elephant.jpg';
+import texture from './bg/texture.jpg';
 
 const artTemplates = [
     {
         id: 1,
-        background: `url(${space})`,
+        background: `url(${lion})`,
         backfaceColor: null
     },
     {
@@ -21,38 +29,78 @@ const artTemplates = [
     },
     {
         id: 3,
-        background: `url(${car})`,
-        backfaceColor: '#CBC7A2'
+        background: `url(${simpsons})`,
+        backfaceColor: '#780929'
     },
     {
         id: 4,
-        background: `url(${feather})`,
-        backfaceColor: '#B3E3F1'
-    },
-    {
-        id: 5,
-        background: `url(${mask})`,
+        background: `url(${texture})`,
         backfaceColor: null
     },
     {
+        id: 5,
+        background: `url(${leftovers})`,
+        backfaceColor: '#BEBEC0'
+    },
+    {
         id: 6,
-        background: `url(${theatre})`,
+        background: `url(${landscape})`,
         backfaceColor: null
     },
     {
         id: 7,
-        background: `url(${water})`,
+        background: `url(${theatre})`,
         backfaceColor: null
     },
     {
         id: 8,
-        background: `url(${album})`,
+        background: `url(${water})`,
         backfaceColor: null
     },
     {
         id: 9,
+        background: `url(${wood})`,
+        backfaceColor: null
+    },
+    {
+        id: 10,
+        background: `url(${fairytale})`,
+        backfaceColor: '#0B2757'
+    },
+    {
+        id: 11,
         background: `url(${leafs})`,
-        backfaceColor: '#7BA740'
+        backfaceColor: '#AED98F'
+    },
+    {
+        id: 12,
+        background: `url(${heels})`,
+        backfaceColor: '#9A0000'
+    },
+    {
+        id: 13,
+        background: `url(${balcony})`,
+        backfaceColor: '#070922'
+    },
+    {
+        id: 14,
+        background: `url(${bean})`,
+        backfaceColor: '#62D5C4'
+    },
+    {
+        id: 15,
+        background: `url(${lady})`,
+        backfaceColor: '#E2E4CF'
+    },
+    {
+        id: 16,
+        background: `url(${lime})`,
+        backfaceColor: '#017CC2'
+    },
+    {
+        id: 17,
+        background: `url(${elephant})`,
+        backfaceColor: '#A1A1A1'
     }
 ];
 

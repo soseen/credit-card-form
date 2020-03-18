@@ -2,13 +2,11 @@ import React, { useRef, useState, useEffect } from 'react'
 import './CreditCard.css';
 import './CardForm.css'
 import { Link } from 'react-router-dom';
-import mastercardLogo from './icons/mastercard.png'
-import chip from './icons/chip.png'
 import CreditCard from './CreditCard';
 
 const CardForm = ({template, submitCard}) => {
 
-    const cardForm = {
+    const defaultForm = {
         cardNumber1: {value: ''},
         cardNumber2: {value: ''},
         cardNumber3: {value: ''},
@@ -19,10 +17,7 @@ const CardForm = ({template, submitCard}) => {
         cardCVV: {value: ''}
     }
 
-
-    const [form, setForm] = useState(cardForm);
-
-    const [currentInputValue, setCurrentInputValue] = useState('');
+    const [form, setForm] = useState(defaultForm);
 
     const inputNumber1 = useRef();
     const inputNumber2 = useRef();
@@ -37,16 +32,19 @@ const CardForm = ({template, submitCard}) => {
 
 
     const [refIndex, setRefIndex] = useState(0);
-    const [currentRef, setCurrentRef] = useState(inputYear);
+    const [currentRef, setCurrentRef] = useState();
+    const [currentInputValue, setCurrentInputValue] = useState('');
 
     useEffect(() => {
-        if(currentRef && currentInputValue.length === currentRef.current.maxLength && refIndex < 4){
-            console.log(`current ref: ${currentRef}`)
-            console.log(refIndex);  
-            refInputs[refIndex + 1].current.focus();
+        if(template){
+            if(currentRef && currentInputValue.length === currentRef.current.maxLength && refIndex < 4){
+                console.log(`current ref: ${currentRef}`)
+                console.log(refIndex);  
+                refInputs[refIndex + 1].current.focus();
+            }
+            setCurrentInputValue('');
         }
-        setCurrentInputValue('');
-    }, [currentInputValue, currentRef, refInputs, refIndex])
+    }, [currentInputValue, currentRef, refInputs, refIndex, template])
 
     const handleInput = ({target:{name,value}}) => {
         setForm({...form, [name]: {...form[name],value}});
@@ -57,18 +55,13 @@ const CardForm = ({template, submitCard}) => {
     const handleFocus = (e, index) => {
         setRefIndex(index)
         setCurrentRef(refInputs[index]);
-        // console.log(currentRef);
     }
-    
-    // const submitCard = () => {
-    //     displayResult(form)
-    // }
 
     return(
         <div className='form-container'>
-            {template === null && 
+            {template === undefined && 
                 <div> 
-                    <h2>No template chosen</h2>
+                    <h1>No template chosen</h1>
                     <Link to="/credit-card-form/">
                         <button className='btn-choose-template'>Choose Template</button>
                     </Link>
@@ -80,46 +73,7 @@ const CardForm = ({template, submitCard}) => {
                     <button className='btn-return'><i className="fa fa-arrow-left"></i></button>
                     </Link>
                     <h1>Insert details</h1>
-                    {/* <div className='card-wrapper'>
-                        <div className={`card ${currentRef === inputCVV ? 'hidden-card' : 'active-card'}`} style={{
-                            backgroundImage: chosenTemplate.background
-                            }}>
-                            <div className="card-front-wrapper">
-                                <img src={chip} className='card-chip' alt='chip'></img>
-                                <img src={mastercardLogo} className='card-logo' alt='mastercard'></img>
-                                <div className={`card-number ${currentRef === inputNumber1 || currentRef === inputNumber2 || currentRef === inputNumber3 || currentRef === inputNumber4 ? 'input-highlighted' : ''}`}>
-                                    <div className='digits-wrapper'>{form.cardNumber1.value}</div>
-                                    <div className='digits-wrapper'>{form.cardNumber2.value}</div>
-                                    <div className='digits-wrapper'>{form.cardNumber3.value}</div>
-                                    <div className='digits-wrapper'>{form.cardNumber4.value}</div>
-                                </div>
-                                <div className='details-row'>
-                                    <div className={`details-column ${currentRef === inputName ? 'input-highlighted' : ''}`}>
-                                        <div className='details-card-holder'>Card Holder</div>
-                                        <div className='card-holder'>{form.cardHolder.value}</div>
-                                    </div>
-                                    <div className={`details-column ${currentRef === inputYear || currentRef === inputMonth ? 'input-highlighted' : ''}`}>
-                                        <div className='details-card-expires'>Expires</div>
-                                        <div className='card-expires'>{form.cardMonth.value}{'/'}{form.cardYear.value}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={`card-back ${currentRef === inputCVV ? 'active-card' : 'hidden-card'}`} style={chosenTemplate.backfaceColor ? {
-                            backgroundColor: chosenTemplate.backfaceColor
-                        } : {
-                            backgroundImage: chosenTemplate.background,
-                        }}>
-                            <div className='card-back-wrapper'>
-                                <div className='swipe-bar'></div>
-                                <div className='cvv-bar'><p>{form.cardCVV.value}</p></div>
-                                <p className='info'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, corporis ex. Deleniti, at nulla. Cumque maxime expedita accusamus ipsa, officiis dicta sed velit eveniet molestiae similique eum, porro doloribus nobis.</p>
-                            </div>
-                        </div> 
-                    </div> */}
-                    <CreditCard form = {form} currentRef={currentRef} template={template} refInputs={refInputs}/>
-                    
-
+                    <CreditCard form = {form} currentRef={currentRef} template={template} refInputs={refInputs} isFinished={false}/>
                     <div className='credit-card-form'>
                         <div className='inputs-wrapper'>
                             <div className='input-row'>

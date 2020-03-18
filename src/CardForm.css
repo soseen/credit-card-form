@@ -13,27 +13,22 @@
 }
 
 .btn-choose-template {
-    margin-top: 80px;
-    margin-bottom: 100px;
     width: 200px;
     height: 60px;
-    display: inline-block;
-    padding: .9rem 1.25rem;
+    margin: 40px auto;
     border-radius: 10rem;
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     transition: all .4s;
+    cursor: pointer;
 }
-
 
 .btn-choose-template:hover {
     transform: scale(1.05);
-    cursor: pointer;
 }
 
 .btn-return {
