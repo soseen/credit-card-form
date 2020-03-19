@@ -1042,7 +1042,7 @@ body .App h1 {
     height: 200px;
   }
   .card-container .card .card-number {
-    font-size: 16px;
+    font-size: 13px;
     height: 20px;
   }
   .card-container .card .details-row .details-column .details-card-holder,
@@ -1059,7 +1059,7 @@ body .App h1 {
   }
   .card-container .card .card-chip {
     position: absolute;
-    height: 35px;
+    height: 32px;
     width: auto;
   }
   .card-container .card-back .info {

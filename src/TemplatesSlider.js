@@ -77,60 +77,51 @@ const TemplatesSlider = ({chooseTemplate}) => {
     }
 
     return(
-        <div>
-            {componentLoaded === null && 
-                <div className='lazy-loader-container'>
-                    <i class="fa fa-spinner fa-spin"></i>
-                </div>
+        <div className="carousel-container">
+            <h1>Choose template</h1>
+            <div className="switch-set-buttons">
+                <button className={`btn-1 ${currentSet === basicTemplates ?  'isactive' : ''}`} name='basicTemplates' onClick={switchSet}>1</button>
+                <button className={`btn-2 ${currentSet === artTemplates ? 'isactive' : ''}`} name='artTemplates' onClick={switchSet}>2</button>
+            </div>
+            <div className="navButtons">
+                <button className='btn-left' onClick={prevSlide}><i className="fa fa-angle-left"></i></button>
+                <button className='btn-right' onClick={nextSlide}><i className="fa fa-angle-right"></i></button>
+            </div>
+            {currentSet===basicTemplates &&
+                <OwlCarousel
+                options={settings}
+                ref={owlSlider}
+                events={events}
+                >
+                    {basicTemplates.map((template) => (
+                        <div className='card-container'>
+                            <div key={template.id} className='card' id={template.id} style={{
+                                backgroundImage: template.background
+                                }}>
+                            </div>
+                        </div>
+                    ))}
+                </OwlCarousel>
             }
-            {componentLoaded && 
-                <div className="carousel-container">
-                    <h1>Choose template</h1>
-                    <div className="switch-set-buttons">
-                        <button className={`btn-1 ${currentSet === basicTemplates ?  'isactive' : ''}`} name='basicTemplates' onClick={switchSet}>1</button>
-                        <button className={`btn-2 ${currentSet === artTemplates ? 'isactive' : ''}`} name='artTemplates' onClick={switchSet}>2</button>
-                    </div>
-                    <div className="navButtons">
-                        <button className='btn-left' onClick={prevSlide}><i className="fa fa-angle-left"></i></button>
-                        <button className='btn-right' onClick={nextSlide}><i className="fa fa-angle-right"></i></button>
-                    </div>
-                    {currentSet===basicTemplates &&
-                        <OwlCarousel
-                        options={settings}
-                        ref={owlSlider}
-                        events={events}
-                        >
-                            {basicTemplates.map((template) => (
-                                <div className='card-container'>
-                                    <div key={template.id} className='card' id={template.id} style={{
-                                        backgroundImage: template.background
-                                        }}>
-                                    </div>
-                                </div>
-                            ))}
-                        </OwlCarousel>
-                    }
-                    {currentSet===artTemplates &&
-                        <OwlCarousel
-                        options={settings}
-                        ref={owlSlider}
-                        events={events}
-                        >
-                            {artTemplates.map((template) => (
-                                <div className='card-container'>
-                                    <div key={template.id} className='card' id={template.id} style={{
-                                        backgroundImage: template.background
-                                        }}>
-                                    </div>
-                                </div>
-                            ))}
-                    </OwlCarousel>
-                    }
-                    <Link to="/credit-card-form/form">
-                        <button className="btn-proceed" onClick={e => chooseTemplate(currentSet[selectedIndex])}>Proceed</button>
-                    </Link>
-                </div>
+            {currentSet===artTemplates &&
+                <OwlCarousel
+                options={settings}
+                ref={owlSlider}
+                events={events}
+                >
+                    {artTemplates.map((template) => (
+                        <div className='card-container'>
+                            <div key={template.id} className='card' id={template.id} style={{
+                                backgroundImage: template.background
+                                }}>
+                            </div>
+                        </div>
+                    ))}
+            </OwlCarousel>
             }
+            <Link to="/credit-card-form/form">
+                <button className="btn-proceed" onClick={e => chooseTemplate(currentSet[selectedIndex])}>Proceed</button>
+            </Link>
         </div>
     );
 
