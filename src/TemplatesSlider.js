@@ -1,6 +1,4 @@
-import React, { useRef } from 'react';
-import './TemplatesSlider.css';
-import './CreditCard.css';
+import React, { useRef, useEffect } from 'react';
 import { useState } from 'react';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
@@ -20,6 +18,7 @@ const TemplatesSlider = ({chooseTemplate}) => {
     let selectedIndex = 0;
     const owlSlider = useRef();
     const [currentSet, setCurrentSet] = useState(artTemplates);
+    const [componentLoaded, setComponentLoaded] = useState(false);
 
     const settings = {
         nav: false,
@@ -32,6 +31,11 @@ const TemplatesSlider = ({chooseTemplate}) => {
         autoWidth: true,
         margin: 30,
       }
+
+    useEffect(() => {
+        setComponentLoaded(true);
+        console.log(componentLoaded);
+    }, [componentLoaded])
     
     const prevSlide = () => {
         owlSlider.current.prev();
@@ -73,55 +77,60 @@ const TemplatesSlider = ({chooseTemplate}) => {
     }
 
     return(
-        <div className="carousel-container">
-            <h1>Choose template</h1>
-            <div className="switch-set-buttons">
-                <button className={`btn-1 ${currentSet === basicTemplates ?  'isactive' : ''}`} name='basicTemplates' onClick={switchSet}>1</button>
-                <button className={`btn-2 ${currentSet === artTemplates ? 'isactive' : ''}`} name='artTemplates' onClick={switchSet}>2</button>
-            </div>
-            <div className="navButtons">
-                <button className='btn-left' onClick={prevSlide}><i className="fa fa-angle-left"></i></button>
-                <button className='btn-right' onClick={nextSlide}><i className="fa fa-angle-right"></i></button>
-            </div>
-            {currentSet===basicTemplates &&
-                <OwlCarousel
-                options={settings}
-                ref={owlSlider}
-                events={events}
-                >
-                    {basicTemplates.map((card) => (
-                        <div className='card-wrapper'>
-                            <div key={card.id} className='card' id={card.id} style={{
-                                backgroundImage: card.background,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center'
-                                }}>
-                            </div>
-                        </div>
-                    ))}
-                </OwlCarousel>
+        <div>
+            {componentLoaded === null && 
+                <div className='lazy-loader-container'>
+                    <i class="fa fa-spinner fa-spin"></i>
+                </div>
             }
-            {currentSet===artTemplates &&
-                <OwlCarousel
-                options={settings}
-                ref={owlSlider}
-                events={events}
-                >
-                    {artTemplates.map((card) => (
-                        <div className='card-wrapper'>
-                            <div key={card.id} className='card' id={card.id} style={{
-                                backgroundImage: card.background,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center'
-                                }}>
-                            </div>
-                        </div>
-                    ))}
-            </OwlCarousel>
+            {componentLoaded && 
+                <div className="carousel-container">
+                    <h1>Choose template</h1>
+                    <div className="switch-set-buttons">
+                        <button className={`btn-1 ${currentSet === basicTemplates ?  'isactive' : ''}`} name='basicTemplates' onClick={switchSet}>1</button>
+                        <button className={`btn-2 ${currentSet === artTemplates ? 'isactive' : ''}`} name='artTemplates' onClick={switchSet}>2</button>
+                    </div>
+                    <div className="navButtons">
+                        <button className='btn-left' onClick={prevSlide}><i className="fa fa-angle-left"></i></button>
+                        <button className='btn-right' onClick={nextSlide}><i className="fa fa-angle-right"></i></button>
+                    </div>
+                    {currentSet===basicTemplates &&
+                        <OwlCarousel
+                        options={settings}
+                        ref={owlSlider}
+                        events={events}
+                        >
+                            {basicTemplates.map((template) => (
+                                <div className='card-container'>
+                                    <div key={template.id} className='card' id={template.id} style={{
+                                        backgroundImage: template.background
+                                        }}>
+                                    </div>
+                                </div>
+                            ))}
+                        </OwlCarousel>
+                    }
+                    {currentSet===artTemplates &&
+                        <OwlCarousel
+                        options={settings}
+                        ref={owlSlider}
+                        events={events}
+                        >
+                            {artTemplates.map((template) => (
+                                <div className='card-container'>
+                                    <div key={template.id} className='card' id={template.id} style={{
+                                        backgroundImage: template.background
+                                        }}>
+                                    </div>
+                                </div>
+                            ))}
+                    </OwlCarousel>
+                    }
+                    <Link to="/credit-card-form/form">
+                        <button className="btn-proceed" onClick={e => chooseTemplate(currentSet[selectedIndex])}>Proceed</button>
+                    </Link>
+                </div>
             }
-            <Link to="/credit-card-form/form">
-                <button className="btn-proceed" onClick={e => chooseTemplate(currentSet[selectedIndex])}>Proceed</button>
-            </Link>
         </div>
     );
 

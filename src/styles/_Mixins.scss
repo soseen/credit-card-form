@@ -1,0 +1,45 @@
+@mixin button($width, $height, $fontSize) {
+    margin: 60px auto;
+    width: $width;
+    height: $height;
+    display: inline-block;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    background-color: #46D7D7;
+    font-size: $fontSize;
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: all .4s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin switch($width) {
+    margin: 20px auto;
+    width: $width;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@mixin switchButton($width, $height, $fontSize) {
+    width: $width;
+    height: $height;
+    color: white;
+    background-color: $secondaryColor;
+    border: none;
+    font-size: $fontSize;
+    font-weight: 600;
+    transition: all 0.7s;
+    cursor: pointer;
+}
+
+@mixin cardSize($width, $height) {
+    width: $width;
+    height: $height;
+}

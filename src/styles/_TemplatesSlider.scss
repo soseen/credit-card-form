@@ -1,0 +1,61 @@
+
+.owl-stage-outer {
+    height: 380px;
+}
+
+.owl-nav button:hover {
+    background-color: unset !important;
+    transform: scale(1.2) !important;
+}   
+
+.owl-nav button:focus{
+    background-color: unset !important;
+    background-color: none!important;
+    outline: 0;
+}
+
+.btn-proceed {
+    @include button(200px, 60px, 18px);
+}
+
+
+.switch-set-buttons{
+    @include switch(310px);
+    button {
+        @include switchButton(150px, 60px, 18px);
+        &:focus {
+            outline: none;
+        }
+    }
+    .btn-1 {
+        border-radius: 25px 0px 0px 25px;
+    }
+    .btn-2 {
+        border-radius: 0 25px 25px 0;
+    }
+    .isactive {
+        background-color: $primaryColor;
+        outline: none;
+    }
+} 
+
+.navButtons {
+    margin: auto;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    transition: all 1s;
+    margin: 15px auto;
+    button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        outline: none;
+        font-size: 70px;
+        color: black;
+        opacity: 0.4;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

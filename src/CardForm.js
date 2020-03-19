@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react'
-import './CreditCard.css';
-import './CardForm.css'
 import { Link } from 'react-router-dom';
 import CreditCard from './CreditCard';
 
@@ -75,7 +73,7 @@ const CardForm = ({template, submitCard}) => {
                     <h1>Insert details</h1>
                     <CreditCard form = {form} currentRef={currentRef} template={template} refInputs={refInputs} isFinished={false}/>
                     <div className='credit-card-form'>
-                        <div className='inputs-wrapper'>
+                        <div className='inputs-container'>
                             <div className='input-row'>
                                 <div className='input-column'>
                                     <label className='card-input-label'>Card Number</label>

@@ -1,0 +1,219 @@
+
+@media screen and (max-width: 800px) {
+    body .App h1 {
+        font-size: 40px;
+    }
+
+    .btn-proceed {
+        @include button(160px, 50px, 16px);
+        margin: 20px auto;
+    }
+
+    .result-container .switch-display-buttons {
+        @include switch(260px);
+    }
+
+    .result-container .switch-display-buttons button {
+        @include switchButton(125px, 50px, 16px);
+    }
+
+    .switch-set-buttons {
+        @include switch(260px);
+    }
+
+    .switch-set-buttons button {
+        @include switchButton(125px, 50px, 16px);
+    }
+
+    .form-container .btn-choose-template {
+        @include button(160px, 50px, 16px);
+        margin: 20px auto;
+    }
+
+    .result-container .btn-choose-template {
+        @include button(160px, 40px, 14px);
+        margin: 20px auto;
+    }
+
+    .form-container .btn-return {
+        top: 1vh;
+        left: 1vw;
+    }
+
+    .form-container .btn-return i {
+        font-size: 30px;
+    }
+
+    .form-container .credit-card-form {
+        top: 320px;
+    }
+
+    .form-container .credit-card-form .inputs-container {
+        margin-top: 100px;
+    }
+
+    .form-container .credit-card-form .inputs-container .input-row .input-column input, 
+    .form-container .credit-card-form .inputs-container .input-row .input-column select {
+        font-size: 14px;
+    }
+
+    .card-container {
+        width: 420px;
+        height: 270px;
+    }
+    .card-container .card .card-number {
+        font-size: 22px;
+        height: 30px;
+    }
+
+    .card-container .card .details-row .details-column .details-card-holder,
+    .card-container .card .details-row .details-column .details-card-expires { 
+        font-size: 10px;
+    }
+
+    .card-container .card .details-row .details-column .card-holder,
+    .card-container .card .details-row .details-column .card-expires { 
+        font-size: 14px;
+    }
+
+    .card-container .card .card-logo {
+        height: 40px;
+    }
+
+    .card-container .card .card-chip {
+        height: 45px;
+    }
+
+    .card-container .card-back .info {
+        font-size: 12px;
+    }
+
+    .card-container .card-back .cvv-bar p {
+        font-size: 15px;
+    }
+
+    .card-container .static2 {
+        transform: rotate(22deg) translate(60px, 160px);
+    }
+
+    .result-container .card-container {
+        width: 372px;
+        height: 240px;
+    }
+
+    .error-route-container .btn-find-route {
+        @include button(160px, 50px, 16px);
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    body .App h1 {
+        font-size: 30px;
+    }
+
+    .btn-proceed {
+        @include button(120px, 40px, 14px);
+        margin: 10px auto;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .result-container .switch-display-buttons {
+        @include switch(200px);
+    }
+
+    .result-container .switch-display-buttons button {
+        @include switchButton(95px, 40px, 14px);
+    }
+
+    .switch-set-buttons {
+        @include switch(200px);
+    }
+
+    .switch-set-buttons button {
+        @include switchButton(95px, 40px, 14px);
+    }
+
+    .owl-stage-outer {
+        height: 250px;
+    }
+
+    .form-container .btn-choose-template {
+        @include button(120px, 40px, 14px);
+        margin: 10px auto;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .result-container .btn-choose-template {
+        @include button(120px, 40px, 14px);
+        margin: 10px auto;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .form-container .btn-return {
+        top: 1vh;
+        left: 1vw;
+    }
+
+    .form-container .credit-card-form {
+        top: 240px;
+    }
+
+    .card-container {
+        width: 310px;
+        height: 200px;
+    }
+    .card-container .card .card-number {
+        font-size: 16px;
+        height: 20px;
+    }
+
+    .card-container .card .details-row .details-column .details-card-holder,
+    .card-container .card .details-row .details-column .details-card-expires { 
+        font-size: 8px;
+    }
+
+    .card-container .card .details-row .details-column .card-holder,
+    .card-container .card .details-row .details-column .card-expires { 
+        font-size: 11px;
+    }
+
+    .card-container .card .card-logo {
+        height: 30px;
+        width: auto;
+    }
+
+    .card-container .card .card-chip {
+        position: absolute;
+        height: 35px;
+        width: auto;
+    }
+
+    .card-container .card-back .info {
+        font-size: 8px;
+    }
+
+    .card-container .card-back .cvv-bar p {
+        font-size: 12px;
+    }
+
+    .card-container .static2 {
+        transform: rotate(22deg) translate(50px, 130px);
+    }
+
+    .result-container .card-container {
+        width: 280px;
+        height: 180px;
+    }
+
+    .error-route-container .btn-find-route {
+        @include button(120px, 40px, 14px);
+        margin: 10px auto;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}

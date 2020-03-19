@@ -1,0 +1,191 @@
+
+.card-container {
+    @include cardSize(530px, 340px);
+    position: relative;
+    display: flex;
+    margin: auto;
+    .card, .card-back {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        cursor: pointer; 
+        display: flex;
+        -moz-box-shadow: 0px 15px 25px rgba(0,0,0,.8);
+        -webkit-box-shadow: 0px 15px 25px rgba(0,0,0,.8);
+        box-shadow: 0px 15px 25px rgba(0,0,0,.8);
+        border: 0px 6px 1px 0px solid black;
+        backface-visibility: hidden;
+        background-position: center;
+        background-size: cover;
+        transition: transform 2s;
+    }
+    .card {
+        position: relative;
+        z-index: 3;
+        font-family: 'Inconsolata', monospace;
+        letter-spacing: 1px;
+        position: relative;
+        color: white;
+        overflow: hidden;
+        .card-logo {
+            position: absolute;
+            height: 50px;
+            width: auto;
+            top: 7%;
+            right: 10%;
+        }
+        .card-chip {
+            position: absolute;
+            height: 60px;
+            width: auto;
+            top: 7%;
+            left: 10%;
+        }
+        .card-number {
+            font-size: 30px;
+            padding: 5px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: 5px;
+            width: 80%;
+            margin-left: 2px;
+            text-shadow: 1px 1px #000000;
+            display: flex;
+            justify-content: space-between;
+            .digits-container {
+                min-width: 24%;
+                text-align: left;
+            }
+        }
+        .details-row {
+            margin: 0 auto;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            .details-column {
+                display: flex;
+                min-width: 40%;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 6%;
+                padding: 5px;
+                .details-card-holder,
+                .details-card-expires {
+                    font-size: 13px;
+                    opacity: 0.7;
+                    text-transform: uppercase;
+                    text-shadow: 1px 1px #000000;
+                }
+                .card-holder,
+                .card-expires {
+                    color: white;
+                    font-size: 18px;
+                    text-shadow: 1px 1px #000000;
+                    height: 1em;
+                }
+                &.details-column:nth-child(2) {
+                    min-width: unset;
+                }
+            }
+        }
+        .input-highlighted {
+            border: 2px solid #2d2d2d;
+            border-radius: 5px;
+            transition: all 0.5s;
+        }
+    }
+    .card-back {
+        position: absolute;
+        transform: rotateY(180deg);
+        z-index: 2;
+        flex-direction: column;
+        color: white;
+        text-align: left;
+        overflow: hidden;
+        font-family: sans-serif;    
+        letter-spacing: 1px;
+        .swipe-bar {
+            width: 100%;
+            height: 20%;
+            background-color: black;
+            margin: 5% auto;
+            margin-top: 10%;
+        }
+        .cvv-bar {
+            width: 90%;
+            height: 15%;
+            border-radius: 5px;
+            background-color: white;
+            text-align: right;
+            margin: 2% auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            p {
+                color: black;
+                margin-right: 8px;
+                font-size: 19px;
+            }
+        }
+        .info {
+            margin: 8px 5%;
+            font-size: 16px;
+            text-shadow: 1px 1px black;
+        }
+    }
+    .active-card {
+        transform: rotateY(0deg) !important;
+    }
+    .hidden-card {
+        transform: rotateY(-180deg) !important;
+    }
+    .static1, .static2,
+    .rotate1, .rotate2 {
+        margin-top: 40px;
+    }
+    .static1 {
+        transform: rotate(-18deg) translate(-20px, 40px);
+    }
+    .static2 {
+        transform: rotate(22deg) translate(100px, 200px);
+    }
+    .rotate1 {
+        animation: rotate1 10s linear infinite;
+        -webkit-animation: rotate1 10s linear infinite;
+        margin-top: 60px;
+    }
+    .rotate2 {
+        animation: rotate2 10s linear infinite;
+        -webkit-animation: rotate2 10s linear infinite;
+        margin-top: 60px;
+    }
+}
+
+@keyframes rotate1 {
+    from{
+        transform: rotateY(0);
+        -webkit-transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    from{
+        transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+    }
+    to{
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+    }
+}
+

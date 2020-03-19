@@ -1,8 +1,8 @@
 body {
-  background-color: rgb(3, 56, 56);
+  background-color: #033838;
 }
 
-h1{
+h1 {
   margin: 50px auto;
   font-size: 58px;
   color: white;
@@ -12,7 +12,6 @@ h1{
 .App {
   text-align: center;
 }
-
 
 @media screen and (max-width: 800px) {
   h1 {
@@ -25,3 +24,4 @@ h1{
     font-size: 35px;
   }
 }
+/*# sourceMappingURL=App.css.map */
