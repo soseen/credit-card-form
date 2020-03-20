@@ -31,8 +31,14 @@
     }
 
     .result-container .btn-choose-template {
-        @include button(160px, 40px, 14px);
+        @include button(160px, 50px, 14px);
         margin: 20px auto;
+    }
+
+    .result-container .btn-start-over {
+        @include button(160px, 50px, 14px);
+        margin: 20px auto;
+        margin-top: 300px;
     }
 
     .form-container .btn-return {
@@ -93,7 +99,7 @@
     }
 
     .card-container .static2 {
-        transform: rotate(22deg) translate(60px, 160px);
+        transform: rotate(22deg) translate(40px, 160px);
     }
 
     .result-container .card-container {
@@ -154,6 +160,14 @@
         letter-spacing: 1px;
     }
 
+    .result-container .btn-start-over {
+        @include button(120px, 40px, 14px);
+        margin: 10px auto;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-top: 250px;
+    }
+
     .form-container .btn-return {
         top: 1vh;
         left: 1vw;
@@ -169,18 +183,18 @@
     }
 
     .card-container .card .card-number {
-        font-size: 13px;
+        font-size: 14px;
         height: 20px;
     }
 
     .card-container .card .details-row .details-column .details-card-holder,
     .card-container .card .details-row .details-column .details-card-expires { 
-        font-size: 8px;
+        font-size: 6px;
     }
 
     .card-container .card .details-row .details-column .card-holder,
     .card-container .card .details-row .details-column .card-expires { 
-        font-size: 11px;
+        font-size: 9px;
     }
 
     .card-container .card .card-logo {
@@ -203,7 +217,7 @@
     }
 
     .card-container .static2 {
-        transform: rotate(22deg) translate(50px, 130px);
+        transform: rotate(22deg) translate(50px, 120px);
     }
 
     .result-container .card-container {

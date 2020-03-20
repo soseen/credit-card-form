@@ -1,5 +1,5 @@
 import leafs from './bg/leafs.jpg';
-import water from './bg/water.jpg';
+import fruit from './bg/fruit.jpg';
 import lion from './bg/lion.jpg';
 import carnaval from './bg/carnaval.jpg';
 import leftovers from './bg/leftovers.jpg';
@@ -47,8 +47,8 @@ const artTemplates = [
     },
     {
         id: 7,
-        background: `url(${water})`,
-        backfaceColor: null
+        background: `url(${fruit})`,
+        backfaceColor: '#5BC3EA'
     },
     {
         id: 8,

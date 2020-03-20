@@ -10,6 +10,7 @@ import cyber from './bg/cyber.jpg';
 import pink from './bg/pink.jpg';
 import smudges from './bg/smudges.jpg';
 import golden from './bg/golden.jpg';
+import water from './bg/water.jpg';
 
 
 
@@ -66,11 +67,16 @@ const basicTemplates = [
     },
     {
         id: 11,
-        background: `url(${smudges})`,
+        background: `url(${water})`,
         backfaceColor: null
     },
     {
         id: 12,
+        background: `url(${smudges})`,
+        backfaceColor: null
+    },
+    {
+        id: 13,
         background: `url(${worldMap})`,
         backfaceColor: '#E1C158'
     }

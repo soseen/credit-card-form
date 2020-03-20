@@ -67,12 +67,10 @@ const TemplatesSlider = ({chooseTemplate}) => {
         },
     };
 
-    const switchSet = (e) => {
+    const switchSet = (e, desiredSet) => {
         e.preventDefault();
-        if(e.target.name === 'basicTemplates' && currentSet !== basicTemplates){
-            setCurrentSet(basicTemplates);
-        } else if(e.target.name === 'artTemplates' && currentSet !== artTemplates){
-            setCurrentSet(artTemplates);
+        if(currentSet !== desiredSet){
+            setCurrentSet(desiredSet);
         }
     }
 
@@ -80,8 +78,8 @@ const TemplatesSlider = ({chooseTemplate}) => {
         <div className="carousel-container">
             <h1>Choose template</h1>
             <div className="switch-set-buttons">
-                <button className={`btn-1 ${currentSet === basicTemplates ?  'isactive' : ''}`} name='basicTemplates' onClick={switchSet}>1</button>
-                <button className={`btn-2 ${currentSet === artTemplates ? 'isactive' : ''}`} name='artTemplates' onClick={switchSet}>2</button>
+                <button className={`btn-1 ${currentSet === basicTemplates ?  'isactive' : ''}`} name='basicTemplates' onClick={e => switchSet(e, basicTemplates)}>1</button>
+                <button className={`btn-2 ${currentSet === artTemplates ? 'isactive' : ''}`} name='artTemplates' onClick={e => switchSet(e, artTemplates)}>2</button>
             </div>
             <div className="navButtons">
                 <button className='btn-left' onClick={prevSlide}><i className="fa fa-angle-left"></i></button>

@@ -12,7 +12,7 @@
         outline: none;
         i {
             font-size: 70px;
-            color: #46D7D7;
+            color: $primaryColor;
             cursor: pointer;
         }
     }
@@ -23,7 +23,7 @@
         transform: translate(-50%, 0);
         width: 80vw;
         max-width: 600px;
-        background-color: #ffffff;
+        background-color: $formPrimaryColor;
         border-radius: 5px;
         margin: 20px auto;
         margin-bottom: 300px;
@@ -72,7 +72,7 @@
                         text-align: left;
                         color: #2d2d2d;   
                         &:focus {
-                            border: 1px solid #f8c007;
+                            border: 1px solid $formSecondaryColor;
                         }
                         select {
                             -webkit-appearance: none;

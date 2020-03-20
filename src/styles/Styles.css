@@ -55,7 +55,7 @@
   width: 150px;
   height: 60px;
   color: white;
-  background-color: #78D0D0;
+  background-color: #546c6c;
   border: none;
   font-size: 18px;
   font-weight: 600;
@@ -338,13 +338,13 @@
 .card-container .rotate1 {
   animation: rotate1 10s linear infinite;
   -webkit-animation: rotate1 10s linear infinite;
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
 .card-container .rotate2 {
   animation: rotate2 10s linear infinite;
   -webkit-animation: rotate2 10s linear infinite;
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
 @-webkit-keyframes rotate1 {
@@ -617,7 +617,7 @@ input::-webkit-inner-spin-button {
   width: 150px;
   height: 60px;
   color: white;
-  background-color: #78D0D0;
+  background-color: #546c6c;
   border: none;
   font-size: 18px;
   font-weight: 600;
@@ -640,6 +640,33 @@ input::-webkit-inner-spin-button {
 
 .result-container .switch-display-buttons .isactive {
   background-color: #46D7D7;
+  outline: none;
+}
+
+.result-container .btn-start-over {
+  margin: 60px auto;
+  width: 200px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  background-color: #46D7D7;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  cursor: pointer;
+  margin-top: 400px;
+}
+
+.result-container .btn-start-over:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.result-container .btn-start-over:focus {
   outline: none;
 }
 
@@ -744,7 +771,7 @@ body .App h1 {
     width: 125px;
     height: 50px;
     color: white;
-    background-color: #78D0D0;
+    background-color: #546c6c;
     border: none;
     font-size: 16px;
     font-weight: 600;
@@ -766,7 +793,7 @@ body .App h1 {
     width: 125px;
     height: 50px;
     color: white;
-    background-color: #78D0D0;
+    background-color: #546c6c;
     border: none;
     font-size: 16px;
     font-weight: 600;
@@ -801,7 +828,7 @@ body .App h1 {
   .result-container .btn-choose-template {
     margin: 60px auto;
     width: 160px;
-    height: 40px;
+    height: 50px;
     display: inline-block;
     border-radius: 25px;
     border: none;
@@ -820,6 +847,31 @@ body .App h1 {
             transform: scale(1.05);
   }
   .result-container .btn-choose-template:focus {
+    outline: none;
+  }
+  .result-container .btn-start-over {
+    margin: 60px auto;
+    width: 160px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    background-color: #46D7D7;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    cursor: pointer;
+    margin: 20px auto;
+    margin-top: 300px;
+  }
+  .result-container .btn-start-over:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .result-container .btn-start-over:focus {
     outline: none;
   }
   .form-container .btn-return {
@@ -868,8 +920,8 @@ body .App h1 {
     font-size: 15px;
   }
   .card-container .static2 {
-    -webkit-transform: rotate(22deg) translate(60px, 160px);
-            transform: rotate(22deg) translate(60px, 160px);
+    -webkit-transform: rotate(22deg) translate(40px, 160px);
+            transform: rotate(22deg) translate(40px, 160px);
   }
   .result-container .card-container {
     width: 372px;
@@ -945,7 +997,7 @@ body .App h1 {
     width: 95px;
     height: 40px;
     color: white;
-    background-color: #78D0D0;
+    background-color: #546c6c;
     border: none;
     font-size: 14px;
     font-weight: 600;
@@ -967,7 +1019,7 @@ body .App h1 {
     width: 95px;
     height: 40px;
     color: white;
-    background-color: #78D0D0;
+    background-color: #546c6c;
     border: none;
     font-size: 14px;
     font-weight: 600;
@@ -1030,6 +1082,33 @@ body .App h1 {
   .result-container .btn-choose-template:focus {
     outline: none;
   }
+  .result-container .btn-start-over {
+    margin: 60px auto;
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    background-color: #46D7D7;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    cursor: pointer;
+    margin: 10px auto;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 250px;
+  }
+  .result-container .btn-start-over:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .result-container .btn-start-over:focus {
+    outline: none;
+  }
   .form-container .btn-return {
     top: 1vh;
     left: 1vw;
@@ -1042,16 +1121,16 @@ body .App h1 {
     height: 200px;
   }
   .card-container .card .card-number {
-    font-size: 13px;
+    font-size: 14px;
     height: 20px;
   }
   .card-container .card .details-row .details-column .details-card-holder,
   .card-container .card .details-row .details-column .details-card-expires {
-    font-size: 8px;
+    font-size: 6px;
   }
   .card-container .card .details-row .details-column .card-holder,
   .card-container .card .details-row .details-column .card-expires {
-    font-size: 11px;
+    font-size: 9px;
   }
   .card-container .card .card-logo {
     height: 30px;
@@ -1069,8 +1148,8 @@ body .App h1 {
     font-size: 12px;
   }
   .card-container .static2 {
-    -webkit-transform: rotate(22deg) translate(50px, 130px);
-            transform: rotate(22deg) translate(50px, 130px);
+    -webkit-transform: rotate(22deg) translate(50px, 120px);
+            transform: rotate(22deg) translate(50px, 120px);
   }
   .result-container .card-container {
     width: 280px;
