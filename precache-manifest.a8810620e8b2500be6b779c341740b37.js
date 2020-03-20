@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "81bfa53560e3df416b0f7a8e03b45ea6",
+    "revision": "fdcfc1823e2af9e0e0b22ed350c43ffa",
     "url": "/credit-card-form/index.html"
   },
   {
-    "revision": "d3b1282eaea0425899db",
+    "revision": "f6257958f5685e8d5658",
     "url": "/credit-card-form/static/css/2.419a601e.chunk.css"
   },
   {
-    "revision": "6608218700856b478552",
-    "url": "/credit-card-form/static/css/main.2b609284.chunk.css"
+    "revision": "f3b8303a482f7c7c22a5",
+    "url": "/credit-card-form/static/css/main.3268251a.chunk.css"
   },
   {
-    "revision": "d3b1282eaea0425899db",
-    "url": "/credit-card-form/static/js/2.8d7482f3.chunk.js"
+    "revision": "f6257958f5685e8d5658",
+    "url": "/credit-card-form/static/js/2.cbeb0cda.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/credit-card-form/static/js/2.8d7482f3.chunk.js.LICENSE.txt"
+    "url": "/credit-card-form/static/js/2.cbeb0cda.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6608218700856b478552",
-    "url": "/credit-card-form/static/js/main.8ed05d8f.chunk.js"
+    "revision": "f3b8303a482f7c7c22a5",
+    "url": "/credit-card-form/static/js/main.09cd4379.chunk.js"
   },
   {
     "revision": "473bc3b3f59f8627302e",
@@ -82,6 +82,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
     "url": "/credit-card-form/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  {
+    "revision": "c122549eb76720b02a80a8d4991d1f84",
+    "url": "/credit-card-form/static/media/fruit.c122549e.jpg"
   },
   {
     "revision": "96147470dee5655f668c201101d8d11e",
