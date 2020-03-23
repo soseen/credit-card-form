@@ -77,16 +77,16 @@ const CardForm = ({template, submitCard}) => {
                                     <label className='card-input-label'>Card Number</label>
                                     <div className='input-row'>
                                         <div className='input-column'>
-                                            <input type='text' className='cardNumber' name='cardNumber1' maxLength={4} ref={inputNumber1} onFocus={e => handleFocus(e, 0)} onChange={handleInput} value={form.cardNumber1 ? form.cardNumber1.value : ''}></input>
+                                            <input type='text' className='card-number' name='cardNumber1' maxLength={4} ref={inputNumber1} onFocus={e => handleFocus(e, 0)} onChange={handleInput} value={form.cardNumber1 ? form.cardNumber1.value : ''}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='cardNumber' name='cardNumber2' maxLength={4} ref={inputNumber2} onFocus={e => handleFocus(e, 1)} onChange={handleInput} value={form.cardNumber2 ? form.cardNumber2.value : ''}></input>
+                                            <input type='text' className='card-number' name='cardNumber2' maxLength={4} ref={inputNumber2} onFocus={e => handleFocus(e, 1)} onChange={handleInput} value={form.cardNumber2 ? form.cardNumber2.value : ''}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='cardNumber' name='cardNumber3' maxLength={4} ref={inputNumber3} onFocus={e => handleFocus(e, 2)} onChange={handleInput} value={form.cardNumber3 ? form.cardNumber3.value : ''}></input>
+                                            <input type='text' className='card-number' name='cardNumber3' maxLength={4} ref={inputNumber3} onFocus={e => handleFocus(e, 2)} onChange={handleInput} value={form.cardNumber3 ? form.cardNumber3.value : ''}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='cardNumber' name='cardNumber4' maxLength={4} ref={inputNumber4} onFocus={e => handleFocus(e, 3)} onChange={handleInput} value={form.cardNumber4 ? form.cardNumber4.value : ''}></input>
+                                            <input type='text' className='card-number' name='cardNumber4' maxLength={4} ref={inputNumber4} onFocus={e => handleFocus(e, 3)} onChange={handleInput} value={form.cardNumber4 ? form.cardNumber4.value : ''}></input>
                                         </div>
                                     </div>
                                 </div>

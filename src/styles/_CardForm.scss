@@ -1,5 +1,6 @@
 .form-container{
     flex-direction: column;
+    min-height: 100vh;
     .btn-choose-template {
         @include button(200px, 60px);
     }
@@ -39,16 +40,17 @@
             font-weight: 500;
             .input-row {
                 display: flex;
+                justify-content: space-evenly;
                 width: 100%;
                 .input-column {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     width: 100%;
-                    padding: 5px;
+                    padding: 2px;
                     .card-input-label{
                         margin-bottom: 5px;
-                        font-size: 1.4rem;
+                        font-size: 1.5rem;
                         font-family: 'Nunito Sans', sans-serif;
                         font-weight: 600;
                     }
