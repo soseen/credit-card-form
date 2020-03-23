@@ -1,11 +1,12 @@
 
 @media screen and (max-width: 800px) {
-    body .App h1 {
-        font-size: 40px;
+
+    html {
+        font-size: 8px;
     }
 
     .btn-proceed {
-        @include button(160px, 50px, 16px);
+        @include button(160px, 50px);
         margin: 20px auto;
     }
 
@@ -14,7 +15,7 @@
     }
 
     .result-container .switch-display-buttons button {
-        @include switchButton(125px, 50px, 16px);
+        @include switchButton(125px, 50px);
     }
 
     .switch-set-buttons {
@@ -22,21 +23,21 @@
     }
 
     .switch-set-buttons button {
-        @include switchButton(125px, 50px, 16px);
+        @include switchButton(125px, 50px);
     }
 
     .form-container .btn-choose-template {
-        @include button(160px, 50px, 16px);
+        @include button(160px, 50px);
         margin: 20px auto;
     }
 
     .result-container .btn-choose-template {
-        @include button(160px, 50px, 14px);
+        @include button(160px, 50px);
         margin: 20px auto;
     }
 
     .result-container .btn-start-over {
-        @include button(160px, 50px, 14px);
+        @include button(160px, 50px);
         margin: 20px auto;
         margin-top: 300px;
     }
@@ -44,10 +45,6 @@
     .form-container .btn-return {
         top: 1vh;
         left: 1vw;
-    }
-
-    .form-container .btn-return i {
-        font-size: 30px;
     }
 
     .form-container .credit-card-form {
@@ -58,29 +55,13 @@
         margin-top: 100px;
     }
 
-    .form-container .credit-card-form .inputs-container .input-row .input-column input, 
-    .form-container .credit-card-form .inputs-container .input-row .input-column select {
-        font-size: 14px;
-    }
-
     .card-container {
         width: 420px;
         height: 270px;
     }
     .card-container .card .card-number {
-        font-size: 22px;
         height: 30px;
-        letter-spacing: 4px;
-    }
-
-    .card-container .card .details-row .details-column .details-card-holder,
-    .card-container .card .details-row .details-column .details-card-expires { 
-        font-size: 10px;
-    }
-
-    .card-container .card .details-row .details-column .card-holder,
-    .card-container .card .details-row .details-column .card-expires { 
-        font-size: 14px;
+        letter-spacing: 3px;
     }
 
     .card-container .card .card-logo {
@@ -89,14 +70,6 @@
 
     .card-container .card .card-chip {
         height: 45px;
-    }
-
-    .card-container .card-back .info {
-        font-size: 12px;
-    }
-
-    .card-container .card-back .cvv-bar p {
-        font-size: 15px;
     }
 
     .card-container .static2 {
@@ -109,22 +82,22 @@
     }
 
     .error-route-container .btn-find-route {
-        @include button(160px, 50px, 16px);
+        @include button(160px, 50px);
         margin: 20px auto;
     }
 }
 
 @media screen and (max-width: 430px) {
 
-    body .App h1 {
-        font-size: 30px;
+
+    html {
+        font-size: 5px;
     }
 
     .btn-proceed {
-        @include button(120px, 40px, 14px);
+        @include button(120px, 40px);
         margin: 10px auto;
-        font-size: 14px;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
 
     .result-container .switch-display-buttons {
@@ -132,7 +105,7 @@
     }
 
     .result-container .switch-display-buttons button {
-        @include switchButton(95px, 40px, 14px);
+        @include switchButton(95px, 40px);
     }
 
     .switch-set-buttons {
@@ -140,7 +113,7 @@
     }
 
     .switch-set-buttons button {
-        @include switchButton(95px, 40px, 14px);
+        @include switchButton(95px, 40px);
     }
 
     .owl-stage-outer {
@@ -148,24 +121,21 @@
     }
 
     .form-container .btn-choose-template {
-        @include button(120px, 40px, 14px);
+        @include button(120px, 40px);
         margin: 10px auto;
-        font-size: 14px;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
 
     .result-container .btn-choose-template {
-        @include button(120px, 40px, 14px);
+        @include button(120px, 40px);
         margin: 10px auto;
-        font-size: 14px;
         letter-spacing: 1px;
     }
 
     .result-container .btn-start-over {
-        @include button(120px, 40px, 14px);
+        @include button(120px, 40px);
         margin: 10px auto;
-        font-size: 14px;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         margin-top: 250px;
     }
 
@@ -184,19 +154,8 @@
     }
 
     .card-container .card .card-number {
-        font-size: 14px;
         height: 20px;
         letter-spacing: 2px
-    }
-
-    .card-container .card .details-row .details-column .details-card-holder,
-    .card-container .card .details-row .details-column .details-card-expires { 
-        font-size: 6px;
-    }
-
-    .card-container .card .details-row .details-column .card-holder,
-    .card-container .card .details-row .details-column .card-expires { 
-        font-size: 9px;
     }
 
     .card-container .card .card-logo {
@@ -210,14 +169,6 @@
         width: auto;
     }
 
-    .card-container .card-back .info {
-        font-size: 8px;
-    }
-
-    .card-container .card-back .cvv-bar p {
-        font-size: 12px;
-    }
-
     .card-container .static2 {
         transform: rotate(22deg) translate(50px, 120px);
     }
@@ -228,9 +179,8 @@
     }
 
     .error-route-container .btn-find-route {
-        @include button(120px, 40px, 14px);
+        @include button(120px, 40px);
         margin: 10px auto;
-        font-size: 14px;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
 }

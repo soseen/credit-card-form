@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     .btn-choose-template {
-        @include button(200px, 60px, 18px);
+        @include button(200px, 60px);
     }
     .switch-display-buttons{
         @include switch(310px);
         button {
-            @include switchButton(150px, 60px, 18px);
+            @include switchButton(150px, 60px);
             &:focus {
                 outline: none;
             }
@@ -24,7 +24,7 @@
         }
     }
     .btn-start-over {
-        @include button(200px, 60px, 18px);
+        @include button(200px, 60px);
         margin-top: 400px;
     } 
 }

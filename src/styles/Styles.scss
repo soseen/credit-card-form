@@ -1,19 +1,27 @@
-@import './Variables';
-@import './Mixins';
-@import './TemplatesSlider';
-@import './CreditCard';
-@import './CardForm';
-@import './ResultDisplay';
-@import './ErrorRoute';
+@import './variables';
+@import './mixins';
+@import './templatesSlider';
+@import './creditCard';
+@import './cardForm';
+@import './resultDisplay';
+@import './errorRoute';
+@import './footer';
 
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
 
 body {
     background-color: $backgroundColor;
+    height: 100%;
     .App {
       text-align: center;
+      height: 100%;
+      position: relative;
       h1{
         margin: 50px auto;
-        font-size: 58px;
+        font-size: 5.5rem;
         color: white;
         text-shadow: 2px 1px black;
       }

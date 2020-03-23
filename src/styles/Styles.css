@@ -23,7 +23,7 @@
   border: none;
   color: #fff;
   background-color: #46D7D7;
-  font-size: 18px;
+  font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 3px;
   -webkit-transition: all .4s;
@@ -57,7 +57,7 @@
   color: white;
   background-color: #546c6c;
   border: none;
-  font-size: 18px;
+  font-size: 2.2rem;
   font-weight: 600;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
@@ -100,7 +100,7 @@
   border: none;
   background: none;
   outline: none;
-  font-size: 70px;
+  font-size: 6rem;
   color: black;
   opacity: 0.4;
 }
@@ -167,7 +167,7 @@
 }
 
 .card-container .card .card-number {
-  font-size: 30px;
+  font-size: 3rem;
   padding: 5px;
   height: 30px;
   position: absolute;
@@ -231,7 +231,7 @@
 
 .card-container .card .details-row .details-column .details-card-holder,
 .card-container .card .details-row .details-column .details-card-expires {
-  font-size: 13px;
+  font-size: 1.3rem;
   opacity: 0.7;
   text-transform: uppercase;
   text-shadow: 1px 1px #000000;
@@ -240,7 +240,7 @@
 .card-container .card .details-row .details-column .card-holder,
 .card-container .card .details-row .details-column .card-expires {
   color: white;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-shadow: 1px 1px #000000;
   height: 1em;
 }
@@ -301,12 +301,12 @@
 .card-container .card-back .cvv-bar p {
   color: black;
   margin-right: 8px;
-  font-size: 19px;
+  font-size: 1.9rem;
 }
 
 .card-container .card-back .info {
   margin: 8px 5%;
-  font-size: 16px;
+  font-size: 1.6rem;
   text-shadow: 1px 1px black;
 }
 
@@ -407,7 +407,7 @@
   border: none;
   color: #fff;
   background-color: #46D7D7;
-  font-size: 18px;
+  font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 3px;
   -webkit-transition: all .4s;
@@ -434,7 +434,7 @@
 }
 
 .form-container .btn-return i {
-  font-size: 70px;
+  font-size: 7rem;
   color: #46D7D7;
   cursor: pointer;
 }
@@ -490,7 +490,7 @@
 
 .form-container .credit-card-form .inputs-container .input-row .input-column .card-input-label {
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
 }
@@ -507,7 +507,7 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-size: 20px;
+  font-size: 2rem;
   color: white;
   font-weight: 600;
   -webkit-transition: all 0.4s;
@@ -541,7 +541,7 @@
   padding: 15px;
   width: 100%;
   height: 60px;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   border-radius: 5px;
   border: none;
@@ -585,7 +585,7 @@ input::-webkit-inner-spin-button {
   border: none;
   color: #fff;
   background-color: #46D7D7;
-  font-size: 18px;
+  font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 3px;
   -webkit-transition: all .4s;
@@ -619,7 +619,7 @@ input::-webkit-inner-spin-button {
   color: white;
   background-color: #546c6c;
   border: none;
-  font-size: 18px;
+  font-size: 2.2rem;
   font-weight: 600;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
@@ -652,7 +652,7 @@ input::-webkit-inner-spin-button {
   border: none;
   color: #fff;
   background-color: #46D7D7;
-  font-size: 18px;
+  font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 3px;
   -webkit-transition: all .4s;
@@ -697,7 +697,7 @@ input::-webkit-inner-spin-button {
   border: none;
   color: #fff;
   background-color: #46D7D7;
-  font-size: 18px;
+  font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 3px;
   -webkit-transition: all .4s;
@@ -714,24 +714,50 @@ input::-webkit-inner-spin-button {
   outline: none;
 }
 
+.footer-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.footer-container .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #202020;
+  color: white;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1px;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
 body {
   background-color: #033838;
+  height: 100%;
 }
 
 body .App {
   text-align: center;
+  height: 100%;
+  position: relative;
 }
 
 body .App h1 {
   margin: 50px auto;
-  font-size: 58px;
+  font-size: 5.5rem;
   color: white;
   text-shadow: 2px 1px black;
 }
 
 @media screen and (max-width: 800px) {
-  body .App h1 {
-    font-size: 40px;
+  html {
+    font-size: 8px;
   }
   .btn-proceed {
     margin: 60px auto;
@@ -742,7 +768,7 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 16px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
@@ -773,7 +799,7 @@ body .App h1 {
     color: white;
     background-color: #546c6c;
     border: none;
-    font-size: 16px;
+    font-size: 2.2rem;
     font-weight: 600;
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
@@ -795,7 +821,7 @@ body .App h1 {
     color: white;
     background-color: #546c6c;
     border: none;
-    font-size: 16px;
+    font-size: 2.2rem;
     font-weight: 600;
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
@@ -810,7 +836,7 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 16px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
@@ -834,7 +860,7 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
@@ -858,7 +884,7 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
@@ -878,46 +904,25 @@ body .App h1 {
     top: 1vh;
     left: 1vw;
   }
-  .form-container .btn-return i {
-    font-size: 30px;
-  }
   .form-container .credit-card-form {
     top: 320px;
   }
   .form-container .credit-card-form .inputs-container {
     margin-top: 100px;
   }
-  .form-container .credit-card-form .inputs-container .input-row .input-column input,
-  .form-container .credit-card-form .inputs-container .input-row .input-column select {
-    font-size: 14px;
-  }
   .card-container {
     width: 420px;
     height: 270px;
   }
   .card-container .card .card-number {
-    font-size: 22px;
     height: 30px;
-  }
-  .card-container .card .details-row .details-column .details-card-holder,
-  .card-container .card .details-row .details-column .details-card-expires {
-    font-size: 10px;
-  }
-  .card-container .card .details-row .details-column .card-holder,
-  .card-container .card .details-row .details-column .card-expires {
-    font-size: 14px;
+    letter-spacing: 3px;
   }
   .card-container .card .card-logo {
     height: 40px;
   }
   .card-container .card .card-chip {
     height: 45px;
-  }
-  .card-container .card-back .info {
-    font-size: 12px;
-  }
-  .card-container .card-back .cvv-bar p {
-    font-size: 15px;
   }
   .card-container .static2 {
     -webkit-transform: rotate(22deg) translate(40px, 160px);
@@ -936,7 +941,7 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 16px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
@@ -954,8 +959,8 @@ body .App h1 {
 }
 
 @media screen and (max-width: 430px) {
-  body .App h1 {
-    font-size: 30px;
+  html {
+    font-size: 5px;
   }
   .btn-proceed {
     margin: 60px auto;
@@ -966,15 +971,14 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
     transition: all .4s;
     cursor: pointer;
     margin: 10px auto;
-    font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
   .btn-proceed:hover {
     -webkit-transform: scale(1.05);
@@ -999,7 +1003,7 @@ body .App h1 {
     color: white;
     background-color: #546c6c;
     border: none;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
@@ -1021,7 +1025,7 @@ body .App h1 {
     color: white;
     background-color: #546c6c;
     border: none;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
@@ -1039,15 +1043,14 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
     transition: all .4s;
     cursor: pointer;
     margin: 10px auto;
-    font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
   .form-container .btn-choose-template:hover {
     -webkit-transform: scale(1.05);
@@ -1065,14 +1068,13 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
     transition: all .4s;
     cursor: pointer;
     margin: 10px auto;
-    font-size: 14px;
     letter-spacing: 1px;
   }
   .result-container .btn-choose-template:hover {
@@ -1091,15 +1093,14 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
     transition: all .4s;
     cursor: pointer;
     margin: 10px auto;
-    font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-top: 250px;
   }
   .result-container .btn-start-over:hover {
@@ -1121,16 +1122,8 @@ body .App h1 {
     height: 200px;
   }
   .card-container .card .card-number {
-    font-size: 14px;
     height: 20px;
-  }
-  .card-container .card .details-row .details-column .details-card-holder,
-  .card-container .card .details-row .details-column .details-card-expires {
-    font-size: 6px;
-  }
-  .card-container .card .details-row .details-column .card-holder,
-  .card-container .card .details-row .details-column .card-expires {
-    font-size: 9px;
+    letter-spacing: 2px;
   }
   .card-container .card .card-logo {
     height: 30px;
@@ -1140,12 +1133,6 @@ body .App h1 {
     position: absolute;
     height: 32px;
     width: auto;
-  }
-  .card-container .card-back .info {
-    font-size: 8px;
-  }
-  .card-container .card-back .cvv-bar p {
-    font-size: 12px;
   }
   .card-container .static2 {
     -webkit-transform: rotate(22deg) translate(50px, 120px);
@@ -1164,15 +1151,14 @@ body .App h1 {
     border: none;
     color: #fff;
     background-color: #46D7D7;
-    font-size: 14px;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 3px;
     -webkit-transition: all .4s;
     transition: all .4s;
     cursor: pointer;
     margin: 10px auto;
-    font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
   .error-route-container .btn-find-route:hover {
     -webkit-transform: scale(1.05);
@@ -1182,4 +1168,4 @@ body .App h1 {
     outline: none;
   }
 }
-/*# sourceMappingURL=Styles.css.map */
+/*# sourceMappingURL=styles.css.map */

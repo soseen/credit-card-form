@@ -6,6 +6,6 @@
     align-items: center;
     justify-content: center;
     .btn-find-route {
-        @include button(200px, 60px, 18px);
+        @include button(200px, 60px);
     }
 }

@@ -15,14 +15,14 @@
 }
 
 .btn-proceed {
-    @include button(200px, 60px, 18px);
+    @include button(200px, 60px);
 }
 
 
 .switch-set-buttons{
     @include switch(310px);
     button {
-        @include switchButton(150px, 60px, 18px);
+        @include switchButton(150px, 60px);
         &:focus {
             outline: none;
         }
@@ -51,7 +51,7 @@
         border: none;
         background: none;
         outline: none;
-        font-size: 70px;
+        font-size: 6rem;
         color: black;
         opacity: 0.4;
         &:hover {

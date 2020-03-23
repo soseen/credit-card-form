@@ -35,9 +35,7 @@ const CardForm = ({template, submitCard}) => {
 
     useEffect(() => {
         if(template){
-            if(currentRef && currentInputValue.length === currentRef.current.maxLength && refIndex < 4){
-                console.log(`current ref: ${currentRef}`)
-                console.log(refIndex);  
+            if(currentRef && currentInputValue.length === currentRef.current.maxLength && refIndex < 4){  
                 refInputs[refIndex + 1].current.focus();
             }
             setCurrentInputValue('');
