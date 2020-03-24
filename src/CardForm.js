@@ -77,16 +77,16 @@ const CardForm = ({template, submitCard}) => {
                                     <label className='card-input-label'>Card Number</label>
                                     <div className='input-row'>
                                         <div className='input-column'>
-                                            <input type='text' className='card-number' name='cardNumber1' maxLength={4} ref={inputNumber1} onFocus={e => handleFocus(e, 0)} onChange={handleInput} value={form.cardNumber1 ? form.cardNumber1.value : ''}></input>
+                                            <input type='text' className='card-number' autocomplete="cc-number" name='cardNumber1' maxLength={4} ref={inputNumber1} onFocus={e => handleFocus(e, 0)} onChange={handleInput} value={form.cardNumber1 ? form.cardNumber1.value : ''}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='card-number' name='cardNumber2' maxLength={4} ref={inputNumber2} onFocus={e => handleFocus(e, 1)} onChange={handleInput} value={form.cardNumber2 ? form.cardNumber2.value : ''}></input>
+                                            <input type='text' className='card-number' autocomplete="cc-number" name='cardNumber2' maxLength={4} ref={inputNumber2} onFocus={e => handleFocus(e, 1)} onChange={handleInput} value={form.cardNumber2 ? form.cardNumber2.value : ''}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='card-number' name='cardNumber3' maxLength={4} ref={inputNumber3} onFocus={e => handleFocus(e, 2)} onChange={handleInput} value={form.cardNumber3 ? form.cardNumber3.value : ''}></input>
+                                            <input type='text' className='card-number' autocomplete="cc-number" name='cardNumber3' maxLength={4} ref={inputNumber3} onFocus={e => handleFocus(e, 2)} onChange={handleInput} value={form.cardNumber3 ? form.cardNumber3.value : ''}></input>
                                         </div>
                                         <div className='input-column'>
-                                            <input type='text' className='card-number' name='cardNumber4' maxLength={4} ref={inputNumber4} onFocus={e => handleFocus(e, 3)} onChange={handleInput} value={form.cardNumber4 ? form.cardNumber4.value : ''}></input>
+                                            <input type='text' className='card-number' autocomplete="cc-number" name='cardNumber4' maxLength={4} ref={inputNumber4} onFocus={e => handleFocus(e, 3)} onChange={handleInput} value={form.cardNumber4 ? form.cardNumber4.value : ''}></input>
                                         </div>
                                     </div>
                                 </div>
@@ -94,13 +94,13 @@ const CardForm = ({template, submitCard}) => {
                             <div className='input-row'>
                                 <div className='input-column'>
                                     <label className='card-input-label'>Card Holder</label>
-                                    <input type='text' name='cardHolder' ref={inputName} maxLength={30} onFocus={e => handleFocus(e, 4)} onChange={handleInput} value={form.cardHolder.value}></input>
+                                    <input type='text' autocomplete="cc-name" name='cardHolder' ref={inputName} maxLength={30} onFocus={e => handleFocus(e, 4)} onChange={handleInput} value={form.cardHolder.value}></input>
                                 </div>
                             </div>
                             <div className='input-row'>
                                 <div className='input-column'>
                                     <label className='card-input-label'>Month</label>
-                                    <select name='cardMonth' ref={inputMonth} onFocus={e => handleFocus(e, 5)} onChange={handleInput} value={form.cardMonth ? form.cardMonth.value : ''}>
+                                    <select autocomplete="cc-exp" name='cardMonth' ref={inputMonth} onFocus={e => handleFocus(e, 5)} onChange={handleInput} value={form.cardMonth ? form.cardMonth.value : ''}>
                                         <option value="01">1</option>
                                         <option value="02">2</option>
                                         <option value="03">3</option>
@@ -117,7 +117,7 @@ const CardForm = ({template, submitCard}) => {
                                 </div>
                                 <div className='input-column'>
                                     <label className='card-input-label'>Year</label>
-                                    <select name='cardYear' ref={inputYear} onFocus={e => handleFocus(e, 6)} onChange={handleInput} value={form.cardYear ? form.cardYear.value : ''}>
+                                    <select autocomplete="cc-exp" name='cardYear' ref={inputYear} onFocus={e => handleFocus(e, 6)} onChange={handleInput} value={form.cardYear ? form.cardYear.value : ''}>
                                         <option value="20">2020</option>
                                         <option value="21">2021</option>
                                         <option value="22">2022</option>
@@ -131,7 +131,7 @@ const CardForm = ({template, submitCard}) => {
                                 </div>
                                 <div className='input-column'>
                                     <label className='card-input-label'>CVV</label>
-                                    <input type='text' ref={inputCVV} name='cardCVV' className='cardCVV' maxLength={3} onFocus={e => handleFocus(e, 7)} onChange={handleInput} value={form.cardCVV ? form.cardCVV.value : ''}></input>
+                                    <input type='text' ref={inputCVV} className='cardCVV' autocomplete="cc-csc" name='cardCVV' maxLength={3} onFocus={e => handleFocus(e, 7)} onChange={handleInput} value={form.cardCVV ? form.cardCVV.value : ''}></input>
                                 </div>
                             </div>
                             <Link to='/credit-card-form/result'>
