@@ -1,16 +1,16 @@
-import white from './bg/white.jpg';
-import black from './bg/black.jpg';
-import green from './bg/green.jpg';
-import orange from './bg/orange.jpg';
-import space from './bg/space.jpg';
-import darkBlue from './bg/dark-blue.jpg';
-import worldMap from './bg/world.jpg';
-import abstract from './bg/abstract.jpg';
-import cyber from './bg/cyber.jpg';
-import pink from './bg/pink.jpg';
-import smudges from './bg/smudges.jpg';
-import golden from './bg/golden.jpg';
-import water from './bg/water.jpg';
+import white from '../bg/white.jpg';
+import black from '../bg/black.jpg';
+import green from '../bg/green.jpg';
+import orange from '../bg/orange.jpg';
+import space from '../bg/space.jpg';
+import darkBlue from '../bg/dark-blue.jpg';
+import worldMap from '../bg/world.jpg';
+import abstract from '../bg/abstract.jpg';
+import cyber from '../bg/cyber.jpg';
+import pink from '../bg/pink.jpg';
+import smudges from '../bg/smudges.jpg';
+import golden from '../bg/golden.jpg';
+import water from '../bg/water.jpg';
 
 
 

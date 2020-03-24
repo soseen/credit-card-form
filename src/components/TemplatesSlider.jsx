@@ -1,11 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import { useState } from 'react';
-import '../node_modules/font-awesome/css/font-awesome.min.css';
+import '../../node_modules/font-awesome/css/font-awesome.min.css';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
 // import OwlCarousel from 'react-owl-carousel';
-import artTemplates from './artTemplates';
-import basicTemplates from './basicTemplates';
+import artTemplates from '../template-sets/artTemplates';
+import basicTemplates from '../template-sets/basicTemplates';
 import OwlCarousel from 'react-owl-carousel2';
 import 'react-owl-carousel2/src/owl.carousel.css'
 import 'react-owl-carousel2/lib/styles.css'
