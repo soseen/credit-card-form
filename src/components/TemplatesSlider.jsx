@@ -1,9 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { useState } from 'react';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
-import 'owl.carousel/dist/assets/owl.carousel.min.css';
-import 'owl.carousel/dist/assets/owl.theme.default.min.css';
-// import OwlCarousel from 'react-owl-carousel';
 import artTemplates from '../template-sets/artTemplates';
 import basicTemplates from '../template-sets/basicTemplates';
 import OwlCarousel from 'react-owl-carousel2';

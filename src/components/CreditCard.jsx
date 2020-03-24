@@ -15,7 +15,7 @@ const CreditCard = ({form: {cardNumber1, cardNumber2, cardNumber3, cardNumber4, 
                         }}>
                             <img src={chip} className='card-chip' alt='chip'></img>
                             <img src={mastercardLogo} className='card-logo' alt='mastercard'></img>
-                            <div className={`card-number ${currentRef === refInputs[0] || currentRef === refInputs[1] || currentRef === refInputs[2] || currentRef === refInputs[3] ? 'input-highlighted' : ''}`}>
+                            <div className={`card-number ${refInputs.slice(0,3).some(refInput => refInput === currentRef) ? 'input-highlighted' : ''}`}>
                                 <div className='digits-container'>{cardNumber1.value}</div>
                                 <div className='digits-container'>{cardNumber2.value}</div>
                                 <div className='digits-container'>{cardNumber3.value}</div>
