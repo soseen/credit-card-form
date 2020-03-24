@@ -69,7 +69,9 @@ const CardForm = ({template, submitCard}) => {
                     <button className='btn-return'><i className="fa fa-arrow-left"></i></button>
                     </Link>
                     <h1>Insert details</h1>
-                    <CreditCard form = {form} currentRef={currentRef} template={template} refInputs={refInputs} isFinished={false}/>
+                    <div className='card-containter'>
+                        <CreditCard form = {form} currentRef={currentRef} template={template} refInputs={refInputs} isFinished={false}/>
+                    </div>
                     <div className='credit-card-form'>
                         <div className='inputs-container'>
                             <div className='input-row'>

@@ -1,12 +1,18 @@
+
+
 .form-container{
+    position: relative;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     .btn-choose-template {
         @include button(200px, 60px);
     }
     .btn-return {
         position: absolute;
-        left: 5vw;
-        top: 5vh;
+        left: 20px;
+        top: 0;
         background: none;
         border: none;
         outline: none;
@@ -16,11 +22,14 @@
             cursor: pointer;
         }
     }
-    .credit-card-form{
+    .card-container {
         position: absolute;
-        top: 350px;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%);
+    }
+    .credit-card-form{
+        display: block;
+        margin: auto;
         width: 80vw;
         max-width: 600px;
         background-color: $formPrimaryColor;
@@ -32,6 +41,7 @@
         box-shadow: 0px 15px 25px rgba(0,0,0,.8);
         display: flex;
         z-index: 1;
+        margin-top: 200px;
         .inputs-container {
             margin-top: 250px;
             padding: 15px;

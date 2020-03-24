@@ -392,10 +392,18 @@
 }
 
 .form-container {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form-container .btn-choose-template {
@@ -426,8 +434,8 @@
 
 .form-container .btn-return {
   position: absolute;
-  left: 5vw;
-  top: 5vh;
+  left: 20px;
+  top: 0;
   background: none;
   border: none;
   outline: none;
@@ -439,12 +447,16 @@
   cursor: pointer;
 }
 
-.form-container .credit-card-form {
+.form-container .card-container {
   position: absolute;
-  top: 350px;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.form-container .credit-card-form {
+  display: block;
+  margin: auto;
   width: 80vw;
   max-width: 600px;
   background-color: #ffffff;
@@ -457,6 +469,7 @@
   display: -ms-flexbox;
   display: flex;
   z-index: 1;
+  margin-top: 200px;
 }
 
 .form-container .credit-card-form .inputs-container {
@@ -745,7 +758,6 @@ h1 {
 }
 
 main {
-  height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -767,6 +779,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 800px) {
@@ -915,14 +928,11 @@ body {
     outline: none;
   }
   .form-container .btn-return {
-    top: 1vh;
-    left: 1vw;
-  }
-  .form-container .credit-card-form {
-    top: 320px;
+    top: 0;
+    left: 10px;
   }
   .form-container .credit-card-form .inputs-container {
-    margin-top: 100px;
+    margin-top: 150px;
   }
   .card-container {
     width: 420px;
@@ -1125,11 +1135,14 @@ body {
     outline: none;
   }
   .form-container .btn-return {
-    top: 1vh;
-    left: 1vw;
+    top: 0;
+    left: 15px;
   }
   .form-container .credit-card-form {
-    top: 240px;
+    margin-top: 160px;
+  }
+  .form-container .credit-card-form .inputs-container {
+    margin-top: 100px;
   }
   .card-container {
     width: 310px;

@@ -43,16 +43,12 @@
     }
 
     .form-container .btn-return {
-        top: 1vh;
-        left: 1vw;
-    }
-
-    .form-container .credit-card-form {
-        top: 320px;
+        top: 0;
+        left: 10px;
     }
 
     .form-container .credit-card-form .inputs-container {
-        margin-top: 100px;
+        margin-top: 150px;
     }
 
     .card-container {
@@ -140,12 +136,17 @@
     }
 
     .form-container .btn-return {
-        top: 1vh;
-        left: 1vw;
+        top: 0;
+        left: 15px;
     }
 
     .form-container .credit-card-form {
-        top: 240px;
+        margin-top: 160px;
+    }
+
+
+    .form-container .credit-card-form .inputs-container {
+        margin-top: 100px;
     }
 
     .card-container {
