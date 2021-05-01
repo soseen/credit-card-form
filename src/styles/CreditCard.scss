@@ -1,3 +1,4 @@
+@import './Mixins';
 
 .card-container {
     @include cardSize(530px, 340px);

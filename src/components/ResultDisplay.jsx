@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import CreditCard from './CreditCard';
+import '../styles/ResultDisplay.scss'
 
 const ResultDisplay = ({form, template}) => {
 

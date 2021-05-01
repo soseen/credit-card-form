@@ -1,6 +1,7 @@
 import React from 'react';
 import mastercardLogo from '../icons/mastercard.png'
 import chip from '../icons/chip.png'
+import '../styles/CreditCard.scss'
 
 
 const CreditCard = ({form: {cardNumber1, cardNumber2, cardNumber3, cardNumber4, cardHolder, cardMonth, cardYear, cardCVV}, currentRef, template, refInputs, isFinished, display}) => {

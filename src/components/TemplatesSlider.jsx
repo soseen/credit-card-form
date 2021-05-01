@@ -8,6 +8,7 @@ import 'react-owl-carousel2/src/owl.carousel.css'
 import 'react-owl-carousel2/lib/styles.css'
 import 'font-awesome/css/font-awesome.min.css';
 import {Link} from 'react-router-dom';
+import '../styles/TemplatesSlider.scss'
 
 
 const TemplatesSlider = ({chooseTemplate}) => {

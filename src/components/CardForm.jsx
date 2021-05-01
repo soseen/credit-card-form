@@ -1,6 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom';
 import CreditCard from './CreditCard';
+import '../styles/CardForm.scss'
 
 const CardForm = ({template, submitCard}) => {
 
@@ -26,7 +27,10 @@ const CardForm = ({template, submitCard}) => {
     const inputYear = useRef();
     const inputCVV = useRef();
 
-    const refInputs = [inputNumber1, inputNumber2, inputNumber3, inputNumber4, inputName, inputMonth, inputYear, inputCVV];
+    const refInputs = useMemo(() => {
+        return [inputNumber1, inputNumber2, inputNumber3, inputNumber4, inputName, inputMonth, inputYear, inputCVV]    
+    }
+    , [inputNumber1, inputNumber2, inputNumber3, inputNumber4, inputName, inputMonth, inputYear, inputCVV]);
 
 
     const [refIndex, setRefIndex] = useState(0);
