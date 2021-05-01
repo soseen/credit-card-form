@@ -12,31 +12,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Application allows user to create his own librabry of his favorite Youtube and Vimeo videos
 
-### How to use
+## How to use
 
 - Open https://soseen.github.io/credit-card-form
 - Choose a background template
 - Fill the form to add credit card information
 - Display your card design
 
-### Technologies
+## Technologies
 
 - React.js
 - Sass
 - React Router
 
-### Setup
+## Setup
 
-## `npm start`
+### `npm start`
 
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
-## `npm install`
+### `npm install`
 
 Install all the required packages included in the `package.json` file
 
-## `npm run build`
+### `npm run build`
 
 Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
