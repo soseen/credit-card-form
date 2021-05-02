@@ -1,7 +1,10 @@
-@import './Mixins';
+@import './Mixins.scss';
+@import './Variables.scss';
 
 .card-container {
-    @include cardSize(530px, 340px);
+    
+    width: 530px;
+    height: 340px;
     position: relative;
     display: flex;
     margin: auto;
@@ -190,3 +193,55 @@
     }
 }
 
+@media screen and (max-width: 800px) {
+
+    .card-container {
+        width: 420px;
+        height: 270px;
+    }
+    .card-container .card .card-number {
+        height: 30px;
+        letter-spacing: 3px;
+    }
+
+    .card-container .card .card-logo {
+        height: 40px;
+    }
+
+    .card-container .card .card-chip {
+        height: 45px;
+    }
+
+    .card-container .static2 {
+        transform: rotate(22deg) translate(40px, 160px);
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+
+    .card-container {
+        width: 310px;
+        height: 200px;
+    }
+
+    .card-container .card .card-number {
+        height: 20px;
+        letter-spacing: 2px
+    }
+
+    .card-container .card .card-logo {
+        height: 30px;
+        width: auto;
+    }
+
+    .card-container .card .card-chip {
+        position: absolute;
+        height: 32px;
+        width: auto;
+    }
+
+    .card-container .static2 {
+        transform: rotate(22deg) translate(50px, 120px);
+    }
+}

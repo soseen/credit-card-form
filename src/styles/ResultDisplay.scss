@@ -31,3 +31,56 @@
         margin-top: 400px;
     } 
 }
+
+@media screen and (max-width: 800px) {
+    .result-container .switch-display-buttons {
+        @include switch(260px);
+    }
+
+    .result-container .switch-display-buttons button {
+        @include switchButton(125px, 50px);
+    }
+
+    .result-container .btn-choose-template {
+        @include button(160px, 50px);
+        margin: 20px auto;
+    }
+
+    .result-container .btn-start-over {
+        @include button(160px, 50px);
+        margin: 20px auto;
+        margin-top: 300px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .result-container .switch-display-buttons {
+        @include switch(200px);
+    }
+
+    .result-container .switch-display-buttons button {
+        @include switchButton(95px, 40px);
+    }
+
+    .result-container .card-container {
+        width: 280px;
+        height: 180px;
+    }
+
+    .result-container .btn-start-over {
+        @include button(120px, 40px);
+        margin: 20px auto;
+        margin-top: 200px;
+    }
+
+    .card-container .rotate1,
+    .card-container .rotate2 {
+        margin-top: 40px;
+    }
+
+    .card-container .static1,
+    .card-container .static2 {
+        margin-top: 10px;
+    }
+}

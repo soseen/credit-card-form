@@ -134,3 +134,53 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+@media screen and (max-width: 800px){
+    .form-container .btn-return {
+        top: 0;
+        left: 10px;
+    }
+
+    .form-container .credit-card-form .inputs-container {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .form-container .btn-choose-template {
+        @include button(120px, 40px);
+        margin: 10px auto;
+        letter-spacing: 2px;
+    }
+
+    .result-container .btn-choose-template {
+        @include button(120px, 40px);
+        margin: 10px auto;
+        letter-spacing: 1px;
+    }
+
+    .result-container .btn-start-over {
+        @include button(120px, 40px);
+        margin: 10px auto;
+        letter-spacing: 2px;
+        margin-top: 250px;
+    }
+
+    .form-container .btn-return {
+        top: 0;
+        left: 15px;
+    }
+
+    .form-container .credit-card-form {
+        margin-top: 160px;
+    }
+
+
+    .form-container .credit-card-form .inputs-container {
+        margin-top: 100px;
+    }
+
+    .form-container .credit-card-form .inputs-container .input-row .input-column input, 
+    .form-container .credit-card-form .inputs-container .input-row .input-column select {
+        height: 30px;
+    }
+}

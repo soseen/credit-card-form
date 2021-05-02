@@ -12,3 +12,18 @@
         @include button(200px, 60px);
     }
 }
+
+@media screen and (max-width: 800px) {
+    .error-route-container .btn-find-route {
+        @include button(160px, 50px);
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .error-route-container .btn-find-route {
+        @include button(120px, 40px);
+        margin: 10px auto;
+        letter-spacing: 2px;
+    }
+}
