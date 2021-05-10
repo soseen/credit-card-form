@@ -1,4 +1,4 @@
-# Youtube Favorites App
+# Credit Card Form App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## General Info
 
-Application allows user to create his own librabry of his favorite Youtube and Vimeo videos
+Application allows user to create his own credit card design
 
 ## How to use
 
